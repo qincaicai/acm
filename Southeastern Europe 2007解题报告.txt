@@ -1,0 +1,45 @@
+发信人: violinist (巷战狙击手), 信区: Algorithm
+标  题: 少年Peter----Southeastern Europe 2007解题报告
+发信站: 日月光华 (2009年01月17日12:13:16 星期六)
+
+
+经典题/模型比较多
+
+John   Recommend
+
+经典的Mis`ere Nim问题，参见Impartial Combinatorial Games.2.5。
+非 常精巧的一个思路。对于一个至少有2堆都>1的且Nim和非0的状态，我们按照普通Nim的
+策略来进行。因为至少有2堆>1，所以一步之内我 们仍然至少有1堆>1，又注意到我们留给
+对手的是一个平衡态，所以我们留给对手的是一个至少2堆>1的平衡态。
+这样进行下去，直到某一步对手给我们的状态中只有1堆>1（他不可能一口气把两个>1的堆
+都干掉）……
+
+Double Queue
+简单题，我用set的。
+
+‘JBC’
+高精度
+
+Loan Scheduling   Recommend
+标  题: 少年Peter----Southeastern Europe 2007解题报告
+发信站: 日月光华 (2009年01月17日12:13:16 星期六)
+
+
+经典题/模型比较多
+
+John   Recommend
+
+经典的Mis`ere Nim问题，参见Impartial Combinatorial Games.2.5。
+非 常精巧的一个思路。对于一个至少有2堆都>1的且Nim和非0的状态，我们按照普通Nim的
+策略来进行。因为至少有2堆>1，所以一步之内我 们仍然至少有1堆>1，又注意到我们留给
+对手的是一个平衡态，所以我们留给对手的是一个至少2堆>1的平衡态。
+这样进行下去，直到某一步对手给我们的状态中只有1堆>1（他不可能一口气把两个>1的堆
+都干掉）……
+
+Double Queue
+简单题，我用set的。
+
+‘JBC’
+高精度
+
+Loan Scheduling   Recommend
