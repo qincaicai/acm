@@ -1,0 +1,51 @@
+PROGRAM TEST009;
+CONST
+  Const = 1;
+  If = 2;
+  Then = 3;
+  Else = 4;
+  Print = 5
+VAR
+  INTEGER : Integer;
+  INTEGER : Var;
+  INTEGER : Program;
+  INTEGER : ARRAY Array[9000];
+  INTEGER : ARRAY Begin[2];
+  INTEGER : ARRAY End[990]
+BEGIN
+  PRINT Program;
+
+  Array[0] := Const;
+  Array[1] := If;
+  Array[2] := Then;
+  Array[3] := Else;
+  Array[4] := Print;
+
+
+  PRINT Array[0];
+  PRINT Array[3];
+  Var := Array[0];
+  Array[0] := Array[3];
+  Array[3] := Var;
+  PRINT Array[0];
+  PRINT Array[3];
+
+  PRINT Array[0];
+  PRINT Array[4];
+  Array[4] := Array[0] + Array[4];
+  Array[0] := Array[4] - Array[0];
+  Array[4] := Array[4] - Array[0];
+  PRINT Array[0];
+  PRINT Array[4];
+
+  Array[8999] := Array[0];
+  PRINT Array[8999];
+  IF Array[8999] = Array[0] THEN
+    BEGIN
+     PRINT Then;
+     End[989] := Array[8999];
+     PRINT End[989] + Begin[1]
+    END
+  ELSE
+     PRINT Else
+END.

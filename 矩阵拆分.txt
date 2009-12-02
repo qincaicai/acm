@@ -1,0 +1,29 @@
+发信人: ljb (04CS研～), 信区: Algorithm
+标  题: Re: [转载]请教一个矩阵拆分的问题 谢谢
+发信站: 日月光华 (2007年01月04日22:15:47 星期四), 站内信件
+
+construct a network flow as follows:
+
+V=(s, r1,r2,...,rn,c1,c2,...,cm,t)
+s is source, t is sink
+r1..rn corresponds to rows
+c1..cm corresponds to columns.
+
+A[i][j]=1 then there is a edge (ri,cj) with capacity 1.
+edge (s,ri) has capacity d(i)/2 where d(i) is how many 1s in ith row
+edge (cj,t) has capacity e(j)/2 where e(j) is how many 1s in jth col
+
+then push a maximum integer flow.
+
+saturated edges corresponds to a solution.
+
+【 在 spline (02→∞|电灯剑客) 的大作中提到: 】
+: 【 以下文字转载自 Mathematics 讨论区 】
+: 【 原文由 luckypc 所发表 】
+: 有一个0-1矩阵，想把它拆分成两个0-1矩阵。
+: 要求：两个新的矩阵的每一行、每一列之和为原来矩阵每一行、每一列之和的1/2。
+: 有什么好的算法么？谢谢~
+
+
+--
+※ 来源:·日月光华 bbs.fudan.edu.cn·[FROM: 10.20.2.11]

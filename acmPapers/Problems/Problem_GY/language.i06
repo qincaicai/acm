@@ -1,0 +1,16 @@
+PROGRAM TEST006;
+CONST
+  A = 999999
+BEGIN
+  IF A = A THEN
+    IF A > A THEN
+      PRINT 0
+    ELSE
+      PRINT 1;
+  IF A < A THEN
+    PRINT 0
+  ELSE
+    IF A +1 >A THEN
+      IF A=A THEN PRINT 2
+             ELSE PRINT 3
+END.

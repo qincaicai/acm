@@ -1,0 +1,50 @@
+// Problem   Genetic Code
+// Algorithm Backtracking
+// Runtime   O(3^n)
+// Author    Walter Guttmann
+// Date      12.03.2003
+
+#include <cassert>
+#include <cstring>
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+ifstream in("genetic.in");
+
+char s[8192], *end=s, *target=s+5000;
+
+bool isThue()
+{
+  for (int len=1 ; end-len-len>=s ; len++)
+    if (strncmp(end-len-len, end-len, len) == 0)
+      return false;
+  return true;
+}
+
+bool backtrack()
+{
+  if (end == target)
+    return true;
+  ++end;
+  for (end[-1]='N' ; end[-1]<='P' ; end[-1]++)
+    if (isThue() && backtrack())
+      return true;
+  --end;
+  return false;
+}
+
+int main()
+{
+  backtrack();
+  int n;
+  while (in >> n)
+  {
+    if (n == 0) break;
+    assert(1 <= n && n <= 5000);
+    cout.form("%.*s\n", n, s);
+  }
+  return 0;
+}
+

@@ -1,0 +1,66 @@
+2
+A
+B
+1
+A B 1 0
+3
+A
+B
+C
+4
+A B 3 0
+B A 1 4
+A C 5 0
+B C 6 2
+5
+Ger
+Tur
+Fin
+Nor
+Mol
+14
+Fin Mol 3 2
+Tur Nor 3 0
+Tur Ger 1 0
+Nor Fin 1 0
+Mol Ger 1 3
+Tur Fin 1 3
+Nor Mol 2 2
+Nor Ger 0 3
+Tur Mol 2 0
+Ger Fin 2 0
+Mol Fin 0 0
+Ger Mol 6 1
+Fin Tur 2 4
+Mol Nor 0 0
+6
+Ukr
+Fra
+Rus
+Isl
+Arm
+And
+21
+Arm And 3 1
+Ukr Rus 3 2
+Isl Fra 1 1
+And Ukr 0 2
+Rus Fra 2 3
+Arm Isl 0 0
+Ukr Arm 2 0
+Fra And 2 0
+Isl Rus 1 0
+And Isl 0 2
+Fra Ukr 0 0
+Arm Rus 0 3
+Ukr Isl 1 1
+Rus And 6 1
+Fra Arm 2 0
+Ukr And 4 0
+Fra Rus 2 3
+Isl Arm 2 0
+Arm Ukr 0 0
+And Fra 0 1
+Rus Isl 1 0
+0
+

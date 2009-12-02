@@ -1,0 +1,227 @@
+
+
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <head>
+    <title>CS 762 (Graph-Theoretic Algorithms), Winter 2002: Notes</title>
+    <link rel=StyleSheet href="../style.css" type="text/css">
+    </head>
+
+    <body bgcolor="white">
+
+    <TABLE WIDTH="100%">
+    <TR> <td>&nbsp
+    <TR>
+    <TD ALIGN="CENTER"><H2>CS 762 (Graph-Theoretic Algorithms) <br> Winter 2002 <br>
+	Notes </H2>
+    <TD><IMG SRC="http://www.uwaterloo.ca/images/UWlogo.GIF" ALT="UW Logo" HEIGHT=69 ALIGN=RIGHT BORDER=0>
+
+    </TR>
+    </TABLE>
+
+  <P>
+        <TABLE BORDER=2 WIDTH="100%"><TR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../index.php">Home</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Outline/index.php">Outline</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Resources/index.php">Resources</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Schedule/index.php">Schedule</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Summaries/index.php">Summaries</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Grades/index.php">Grades</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Assignments/index.php">Assignments</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Projects/index.php">Projects</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><SPAN CLASS="current">Notes</SPAN><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Open/index.php">Open</A><BR>
+</TABLE><P>Skip to the <A href="#rules">Lecture Notes rules</A>.<!--
+<H3>Resources</H3>
+
+<UL>
+<LI> A template file is available:  you can get a 
+	<a href="source/template.tar">tar-file</a>, or get the
+	<a href="source/template">individual files</A>.
+	<p>
+<LI> Various references in <A href="source/make.ps">PostScript</A> or
+	<A href="source/762.bib">BiBTeX</A>.  
+	<p>
+</UL>
+-->
+
+<H3>Notes</H3>
+
+<UL>
+<LI> <A href="graphdef.ps">Background</A>. 
+	[Taken from an earlier course.] <br>
+	Scribe: Therese Biedl and various students from CS760K, Fall 1999. 
+<LI> Lecture 1: <A href="lecture1.ps">Introduction</A> (Jan. 7, 2002) 
+	Scribe: Therese Biedl.  
+<LI> Lecture 2: <A href="lecture2.ps">Interval graphs</A> (Jan. 9, 2002)  <br>
+	Scribe: Fred Comeau.
+<LI> Lecture 3: <A href="lecture3.ps">Algorithms for interval graphs</A> (Jan. 11, 2002)<br>
+	Scribe: Henning Stehr.
+<LI> Lecture 4: <A href="lecture4.ps">More on interval graphs.  Chordal graphs</A> (Jan. 14, 2002)  <br>
+	Scribe: Mark Petrick
+<LI> Lecture 5: <A href="lecture5.ps">Perfect elimination orders</A> (Jan. 16, 2002) <br>
+	Scribe: Phil Tilker.
+<LI> Lecture 6: <A href="lecture6.ps">Recognizing chordal graphs</A> (Jan. 18, 2002) <br>
+	Scribe: Philip Yang and Therese Biedl.
+<LI> Lecture 7: <A href="lecture7.ps">More on chordal graphs.  Comparability graphs.</A> (Jan. 21, 2002) <br>
+	Scribe: Mike Newman.
+<LI> Lecture 8: <A href="lecture8.ps">Comparability graphs</A> (Jan. 23, 2002)  <br>
+	Scribe: Mohammed Ali Safari.
+<LI> Lecture 9: <A href="lecture9.ps">Towards interval graph testing</A> (Jan. 25, 2002) <br>
+	Scribe: J.P. Pretti.
+<LI> Lecture 10: <A href="lecture10.ps">Recognizing interval graphs. Perfect graphs</A> (Jan. 28, 2002)<br>
+	Scribe: Hubert Chan.
+<LI> Lecture 11: <A href="lecture11.ps">More on perfect graphs</A>  (Jan. 30, 2002)<br>
+	Scribe: Andreas Grau.
+<LI> Lecture 12: <A href="lecture12.ps">Intersection graphs</A> (Feb. 1, 2002)<br>
+	Scribe: Masud Hasan.
+<LI> Lecture 13: <A href="lecture13.ps">Trees and friends</A> (Feb. 4, 2002)<br>
+	Scribe: Josh Lessard.
+<LI> Lecture 14: <A href="lecture14.ps">Bounded treewidth</A> (Feb. 6, 2002)<br>
+	Scribe: Michael Laszlo.
+<LI> Lecture 15: <A href="lecture15.ps">Algorithms for partial k-trees</A>  (Feb. 8, 2002)<br>
+	Scribe: Vlad Ciubotariu.
+<LI> Lecture 16: <A href="biconnected.ps">Review: Biconnectivity</A> (Feb. 11, 2002)  <br>
+	[Taken from an earlier course.] <br>
+	Scribe: Therese Biedl and various students from CS760K, Fall 1999. 
+<LI> Lecture 17: <A href="lecture17.ps">2-terminal SP-graphs</A>  (Feb. 13, 2002) <br>
+	Scribe: Alastair Farrugia
+<LI> Lecture 18: <A href="lecture18.ps">SP-graphs</A> (Feb. 15, 2002) <br>
+	Scribe: Matthew Skala
+<LI> Lecture 19: <A href="lecture19.ps">Separators</A> (Feb. 18, 2002) <br>
+	Scribe: Fred Comeau
+<LI> Lecture 20: <A href="lecture20.ps">End of partial k-trees</A> (Feb. 20, 2002) <br>
+	Scribe: Joe Capka
+<LI> Lecture 21: <A href="planar.ps">Review: Planarity</A> (Mar. 1, 2002)  <br>
+	[Taken from an earlier course.] <br>
+	Scribe: Therese Biedl and various students from CS760K, Fall 1999. 
+<LI> Lecture 22: <A href="lecture22.ps">Triangulated planar graphs</A> (Mar. 4, 2002) <br>
+	Scribe: Masud Hasan
+<LI> Lecture 23: <A href="lecture23.ps">Towards the canonical ordering</A> (Mar. 11, 2002) <br>
+	Scribe: Philip Yang
+<LI> Lecture 24: <A href="lecture24.ps">Applications of the canonical ordering</A> (Mar. 13, 2002) <br>
+	Scribe: Mark Petrick
+<LI> Lecture 25: <A href="lecture25.ps">Problems on planar graphs</A> (Mar. 15, 2002) <br>
+	Scribe: Therese Biedl
+<LI> Lecture 26: Outer-planar graphs (Mar. 18, 2002) <br>
+	Scribe: Michael Laszlo
+<LI> Lecture 27: <A href="lecture27.ps">k-outerplanar graphs</A> (Mar. 20, 2002) <br>
+	Scribe: Therese Biedl
+<LI> Lecture 28: <A href="lecture28.ps">Independent set in planar graphs</A> (Mar. 22, 2002) <br>
+	Scribe: Mike Newman
+<LI> Leture 29: <A href="lecture29.ps">Planarity Testing</A> (Mar. 25, 2002) <br>
+	Scribe: Therese Biedl
+
+</UL>
+
+<A name="rules"></A>
+<H3>Rules</H3>
+<UL>
+<LI> Every student must write at least one set of lecture notes, worth
+	15% of your grade.  Depending on enrollment, some students might be 
+	asked to write a second set of lecture notes worth another 15% of
+	the grade; for these students the weight of the oral exam will
+	decrase by 15%.  (Please let me know if you would like to be
+	one of these students.)
+	<p>
+<LI> Lecture notes must be written in LaTeX. 
+	No other forms are accepted.  
+	If you are not familiar with
+	LaTeX, get familiar quickly (it is an undispensable tool for
+	anyone who ever wants to write an article/thesis in Computer
+	Science or Mathematics).  Various decent LaTeX guides can be
+	found on the Web, for example 
+	<A href="http://www.cs.stir.ac.uk/guides/latex/guide.html">here</A>.
+	LaTeX should be installed on all UW-UNIX computers; you can also
+	get a <A href="http://www.miktex.org">Windows version</A>.
+	<p>
+<LI> Please use the given template for the lecture notes.  (This should
+	also help to get you started on LaTeX if it is new to you.)
+	It contains suggestions for some basic LaTeX, as well as a few
+	comments to keep the appearance of the lecture notes uniform.
+	<p>
+<LI> 10% of your grade are determined by the quality of the first version
+	of the lecture notes that you give me.
+	<p>
+<LI><b>Material to be covered</b>:
+	To get a passing grade, your lecture notes must reflect all material
+	that was written on the board during the lecture.  To
+	get a grade better than that, you should convert what
+	was presented into a class into a miniature article.  In
+	particular:
+	<UL>
+	<LI> Convert the content into complete sentences.
+	<LI> Add lots of pictures to illustrate concepts.
+	<LI> Complete those proofs for which I've given the proof in
+		words (but not in written).  Try to fill in as much
+		of the proofs that I've given in sketch as you can.
+	<LI> Provide "warm-up" to every major result.  Explain what
+		you're about to do, and why this is worth doing.
+		For example, rather than just giving a definition,
+		explain why we need this concept, and then give the
+		definition.
+	<LI> Do a web-search for some of the keywords that were used
+		in class.  Read the background material (if I provided
+		some).  If you see related results and references, 
+		give them in your lecture notes.
+	</UL>
+As far as what all should be covered:
+<UL>
+<LI> You should cover all that I have covered in class and not much more.
+	Recall definitions/results from earlier lectures if you need
+	them, and provide an outlook to where this is going if appropriate,
+	but do not cover material that was or will be fully covered in
+	earlier/later lectures.
+<LI> Keep the order of presentation more or less in the order it was
+	done in class.
+<LI> You do not need to mention administrative details 
+	in your lecture notes.
+	Incorporating the homework is optional; do it if it fits
+	the flow nicely.  Do not include a proof of a homework.
+</UL>
+You are welcome to borrow my (hand-written) notes that I used
+	to prepare the class from.  Recall that you are expected to
+	do more than just transcribe those to LaTeX!
+	<p>
+<LI> Lecture notes are due two weeks after the class that you
+	are covering by 6pm.
+	<P>
+<LI> Every day that you hand in the first version
+	your lecture notes beyond the due 
+	date will decrease your grade (1 percentage-point per day,
+	so with more than 10 days late you won't get any credit).
+	<p>
+<LI> Hand in lecture notes by giving me a printout, or emailing
+	me PostScript, or emailing me all the LaTeX sources.
+	<p>
+<LI> I will return a printout to you with some suggestions for
+	improvement, normally within a few days of having received
+	the notes.  Please incorporate those suggestions.
+	<p>
+<LI> 5% of your grade will be determined by the quality of the revised
+	version of the lecture notes.  If I had
+	no comments (rare!), then these 5% are automatically yours.  
+	<p>
+<LI> The revised version is due within a week from when you received
+	my comments.  Every day beyond that will deduct 1 percentage-point.
+	<p>
+<LI> Please send me the revised version with 
+	the complete sources (including LaTeX source files and source and
+	PostScript files of any figures you
+	may have drawn).  PostScript
+	will be made available on the web; I may want to rewrite a few
+	things as well, and therefore need the LaTeX sources, too.  Please
+	send your files in a tar-file or a zip-file.
+</UL>
+
+</DIV>
+	<P>
+	<HR>
+	<SPAN CLASS="footnote">Webmaster:
+	<A HREF="mailto: cs762@student.math.uwaterloo.ca "> cs762@student.math.uwaterloo.ca </A></SPAN><BR><SPAN CLASS="footnote">Last modified: 11/27/2002</SPAN>
+  </TD>
+  </TABLE>
+
+  </BODY>
+  </HTML>
+  

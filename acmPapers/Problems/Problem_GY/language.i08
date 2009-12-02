@@ -1,0 +1,30 @@
+PROGRAM TEST008;
+CONST
+  OK = 1;
+  FALSE = 0
+VAR
+  INTEGER : ARRAY A[10];
+  INTEGER : ABC
+BEGIN
+  A[1] := 2;
+  A[2] := A[A[1]-1];
+  IF A[2] < 1 + A[1] THEN
+    BEGIN
+      PRINT 92-100*0;
+      PRINT A[2];
+      A[1] := 21;
+      IF OK < 1 THEN
+        PRINT OK
+      ELSE BEGIN
+        PRINT A[1]+2;
+        PRINT FALSE;
+        PRINT 0-1
+      END
+    END;
+  IF OK = FALSE THEN BEGIN END
+  ELSE BEGIN
+     A[9] := A[A  [A[1]-19]];
+     PRINT A[9];
+     PRINT ABC * ABC + ABC
+  END
+END.

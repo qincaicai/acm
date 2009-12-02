@@ -1,0 +1,41 @@
+// Problem   Edge
+// Algorithm Straight-Forward
+// Runtime   O(n)
+// Author    Walter Guttmann
+// Date      05.01.2003
+
+#include <complex>
+#include <fstream>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+typedef complex<double> comp;
+
+ifstream in ("edge.in");
+
+int main ()
+{
+  string s;
+  while (in >> s)
+  {
+    cout << "300 420 moveto" << endl;
+    cout << "310 420 lineto" << endl;
+    comp pos(310, 420), d(10, 0);
+    for (string::iterator it = s.begin() ; it != s.end() ; ++it)
+    {
+      switch (*it)
+      {
+        case 'A': pos += (d *= comp(0, -1)); break;
+        case 'V': pos += (d *= comp(0, 1)); break;
+        default: throw;
+      }
+      cout << pos.real() << " " << pos.imag() << " lineto" << endl;
+    }
+    cout << "stroke" << endl;
+    cout << "showpage" << endl;
+  }
+  return 0;
+}
+

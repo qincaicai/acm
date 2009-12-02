@@ -1,0 +1,22 @@
+PROGRAM TEST004;
+CONST
+  A = 423;
+  B = 34;
+  C = 49; D = 10; E = 23; F = 111
+VAR
+  INTEGER       : ABC;
+  INTEGER       : ABCDEF;
+  INTEGER       : DEF;
+  INTEGER       : XYZ
+
+BEGIN
+  ABC := A + B + C;
+  ABCDEF := A + B + C - D - E - F;
+  DEF := A * B + C - D * E;
+  XYZ := A;
+  XYZ:=XYZ+1000*XYZ - A;
+  PRINT A;
+  PRINT A+B;
+  PRINT XYZ;
+  PRINT DEF + ABC - ABCDEF
+END.

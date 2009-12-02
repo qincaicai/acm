@@ -1,0 +1,47 @@
+-- Problem   Fixed Partition Contest Management
+-- Algorithm Brute Force
+-- Runtime   O(m^n*n^2)
+-- Author    Walter Guttmann
+-- Date      01.05.2003
+
+import Maybe;
+import Numeric;
+
+main :: IO ()
+main =
+  do input <- readFile "contest.in"
+     mapM_ solve $ zip [1..] $ cases $ map read $ words input
+
+type Case = (Int,Int,[Int],[[(Int,Int)]])
+
+cases :: [Int] -> [Case]
+cases (0:0:_) = []
+cases (m:n:xs1) = (m,n,is,tss) : cases xs3
+  where (is,xs2) = splitAt m xs1
+        (tss,xs3) = tradeoffs n xs2
+        tradeoffs 0 ys = ([],ys)
+        tradeoffs i (k:ys1) = (pairs ps : tss',ys3)
+          where (ps,ys2) = splitAt (2*k) ys1
+                (tss',ys3) = tradeoffs (i-1) ys2
+                pairs (s:t:xs) = (s,t) : pairs xs
+                pairs [] = []
+
+solve :: (Int,Case) -> IO ()
+solve (kase,(m,n,is,tss)) =
+  do putStrLn $ "Case " ++ show kase
+     putStrLn $ "Average solution time = " ++ showFFloat (Just 2) (fromIntegral score / fromIntegral n) ""
+     mapM_ putStrLn [ "Problem " ++ show problem ++ " is solved by member " ++ show member ++ " from " ++ show from ++ " to " ++ show to | (problem,(member,_)) <- zip [1..] optas , let (from,to) = schedule optas problem ]
+     putStrLn $ ""
+  where (score,optas) = minimum [ (value as,as) | as <- assignments n ]
+        value as = sum [ snd (schedule as problem) | problem <- [1..n] ]
+        -- generate all valid assignments
+        assignments 0 = [[]]
+        assignments left = [ (member,time):as | member <- [1..m] , Just time <- [soltime !! (member-1) !! (n-left)] , as <- assignments (left-1) ]
+        -- soltime[i,j] is the time required for member i to solve problem j
+        soltime = [ [ reqtime (is !! (member-1)) (tss !! (problem-1)) | problem <- [1..n] ] | member <- [1..m] ]
+        reqtime i = listToMaybe . reverse . map snd . takeWhile ((<=i) . fst)
+        -- schedule problem p using assignment as, i.e., return the start and end times
+        schedule as p = (from,from+ptime)
+          where (pmember,ptime) = as !! (p-1)
+                from = sum [ time | (problem,(member,time)) <- zip [1..] as , member == pmember , time<ptime || time==ptime && problem<p ]
+

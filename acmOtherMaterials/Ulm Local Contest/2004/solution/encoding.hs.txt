@@ -1,0 +1,19 @@
+-- Problem   Run Length Encoding
+-- Algorithm Straight-Forward
+-- Runtime   O(n)
+-- Author    Walter Guttmann
+-- Date      2003.12.07
+
+main :: IO ()
+main =
+  do input <- readFile "encoding.in"
+     mapM_ (putStrLn . solve) $ lines input
+
+solve :: String -> String
+solve "" = ""
+solve xs@(y:ys) = if r > 1 then show r ++ [y] ++ solve (drop r xs)
+                           else "1" ++ patch (take s xs) ++ "1" ++ solve (drop s xs)
+  where r = min 9 $ length $ takeWhile (== y) xs
+        s = length $ takeWhile (uncurry (/=)) $ zip xs (ys ++ "\n")
+        patch = concatMap (\x -> if x == '1' then "11" else [x])
+

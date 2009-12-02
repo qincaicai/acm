@@ -1,0 +1,33 @@
+-- Problem   Edge
+-- Algorithm Straight-Forward
+-- Runtime   O(n)
+-- Author    Walter Guttmann
+-- Date      05.01.2003
+
+import Complex;
+import Monad;
+
+type Comp = Complex Double
+
+main :: IO ()
+main = readFile "edge.in" >>= mapM_ solve . words
+
+solve :: String -> IO ()
+solve s =
+  do putStrLn "300 420 moveto"
+     putStrLn "310 420 lineto"
+     foldM turn (310:+420,10:+0) s
+     putStrLn "stroke"
+     putStrLn "showpage"
+
+turn :: (Comp,Comp) -> Char -> IO (Comp,Comp)
+turn (pos,d) c =
+  let print (x:+y) = show (round x) ++ " " ++ show (round y) ++ " lineto"
+      d' = rot d c
+      pos' = pos + d'
+  in putStrLn (print pos') >> return (pos',d')
+
+rot :: Comp -> Char -> Comp
+rot d 'A' = d * (0:+(-1))
+rot d 'V' = d * (0:+1)
+

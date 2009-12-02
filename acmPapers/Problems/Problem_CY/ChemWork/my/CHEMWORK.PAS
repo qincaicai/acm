@@ -1,0 +1,72 @@
+{$A+,B-,D+,E+,F-,G-,I+,L+,N-,O-,P-,Q+,R+,S+,T-,V+,X+,Y+}
+{$M 65520,0,655360}
+const   inputfile       =       'chemwork.i09';
+        outputfile      =       'chemwork.out';
+        {chemwork.o09}
+        MAXN            =       1000;
+var     i,j,n,first,last:       longint;
+        c               :       array [1..MAXN*2,0..1] of integer;
+        a,finish        :       array [0..1,1..MAXN] of longint;
+        f               :       array [1..MAXN] of boolean;
+        lst             :       array [1..MAXN] of longint;
+procedure Quick_Sort(x,y:longint);
+var  i,j,t0,t1    :   longint;
+begin
+  i:=x;j:=y;
+  t0:=c[i,0];t1:=c[i,1];
+  repeat
+    while (i<j)and(a[t0,t1]<a[c[j,0],c[j,1]]) do j:=j-1;
+    if i=j then break;
+    c[i]:=c[j];i:=i+1;
+    while (i<j)and(a[c[i,0],c[i,1]]<a[t0,t1]) do i:=i+1;
+    if i=j then break;
+    c[j]:=c[i];j:=j-1;
+  until i>=j;
+  c[i,0]:=t0;c[i,1]:=t1;
+  if x<i-1 then Quick_Sort(x,i-1);
+  if j+1<y then Quick_Sort(j+1,y);
+end;
+begin
+  assign(input,inputfile);
+  reset(input);
+  read(n);
+  for i:=1 to n do
+    begin
+      read(a[0,i],a[1,i]);
+      c[i*2-1,0]:=0;
+      c[i*2-1,1]:=i;
+      c[i*2,0]:=1;
+      c[i*2,1]:=i;
+    end;
+  close(input);
+  fillchar(f,sizeof(f),true);
+  Quick_Sort(1,n+n);
+  first:=1;last:=n;
+  for i:=1 to n+n do
+    if f[c[i,1]] then
+      begin
+        f[c[i,1]]:=false;
+        if c[i,0]=0 then
+          begin
+            lst[first]:=c[i,1];
+            first:=first+1;
+          end
+          else
+            begin
+              lst[last]:=c[i,1];
+              last:=last-1;
+            end;
+      end;
+  finish[0,1]:=a[0,lst[1]];
+  finish[1,1]:=a[0,lst[1]]+a[1,lst[1]];
+  for i:=2 to n do
+    begin
+      finish[0,i]:=finish[0,i-1]+a[0,lst[i]];
+      if finish[0,i]>finish[1,i-1] then finish[1,i]:=finish[0,i]+a[1,lst[i]]
+        else finish[1,i]:=finish[1,i-1]+a[1,lst[i]];
+    end;
+  assign(output,outputfile);
+  rewrite(output);
+  writeln(finish[1,n]);
+  close(output);
+end.

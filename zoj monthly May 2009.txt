@@ -1,0 +1,665 @@
+百度空间 <http://hi.baidu.com> | 百度首页 <http://www.baidu.com/> | 登录
+<https://passport.baidu.com/?login&tpl=sp&tpl_reg=sp&u=http://hi.baidu.com%2Fnovosbirsk%2Fblog%2Fitem%2Ff4ddc5ad3cf8ec014b36d62f%252Ehtml>
+
+                <http://hi.baidu.com/st/reg.html>
+Novosbirsk ... BY PKKJ @ SCAU </novosbirsk>
+About ACM，Linux，GIS，etc —— Bien faire et laisser dire.
+ 
+主页 </novosbirsk>博客 </novosbirsk/blog>相册 </novosbirsk/album>|个人档
+案 </novosbirsk/profile> |好友 </novosbirsk/friends>
+  	
+查看文章
+		 
+
+ZOJ Monthly, May 2009 简明报告
+2009-05-03 18:16
+本来一向认为XXOJ Monthly的题目是很BT的（被POJ Monthly虐多了）。难得这次
+ZOJ月赛的题目不难，在强大的队友Little Dragon和ick2的努力下，本菜鸟队侥幸
+圆满。写个解题报告。
+Solved 	ID 	Title 	Ratio
+<http://acm.zju.edu.cn/onlinejudge/showContestProblems.do?contestId=292&pageNumber=1&order=ratio>
+(AC
+<http://acm.zju.edu.cn/onlinejudge/showContestProblems.do?contestId=292&pageNumber=1&order=ac>/All)
+<http://acm.zju.edu.cn/onlinejudge/showContestProblems.do?contestId=292&pageNumber=1&order=all>
+
+Yes 	A
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3309> 	Accurately
+Say "CocaCola"! Again
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3309> 	22.08%
+(201
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=A&judgeReplyIds=5>/910
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=A>)
+
+Yes 	B
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3310> 	Coverage
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3310> 	34.19%
+(198
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=B&judgeReplyIds=5>/579
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=B>)
+
+Yes 	C
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3311> 	Design
+the city
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3311> 	24.73%
+(47
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=C&judgeReplyIds=5>/190
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=C>)
+
+Yes 	D
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3312> 	Give
+me the result
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3312> 	16.23%
+(271
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=D&judgeReplyIds=5>/1669
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=D>)
+
+Yes 	E
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3313> 	Google
+Book
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3313> 	25.40%
+(235
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=E&judgeReplyIds=5>/925
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=E>)
+
+Yes 	F
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3314> 	Intersection
+of Two Sets
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3314> 	35.24%
+(473
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=F&judgeReplyIds=5>/1342
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=F>)
+
+Yes 	G
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3315> 	Longest
+Repeated Substring
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3315> 	9.21%
+(27
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=G&judgeReplyIds=5>/293
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=G>)
+
+Yes 	H
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3316> 	Police
+and Thief
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3316> 	7.30%
+(16
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=H&judgeReplyIds=5>/219
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=H>)
+
+Yes 	I
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3317> 	Tree
+of Tree
+<http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3317> 	14.41%
+(82
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=I&judgeReplyIds=5>/569
+<http://acm.zju.edu.cn/onlinejudge/showContestRuns.do?contestId=292&problemCode=I>)
+
+
+
+报告不是很详细，因为今天的手打程序打得很累啊，感觉要残废了。
+
+ZOJ 3193 Accurately Say "CocaCola"! Again
+队友打表过的。虽是打表，但是那个表很小，因为很多是重复的。下面是队友的代码：
+#include<stdio.h>
+using namespace std;
+
+int
+ft[18][2]={{1,7},{2,27},{3,70},{11,270},{12,700},{101,2700},{102,7000},{1001,26999},{1003,70000},
+{10001,270000},{10002,700000},{100001,1699999},{100002,7000000},{1000001,27000000},
+{1000002,70000000},{10000001,270000000},{10000002,700000000},{20000000,0}};
+
+int main()
+{
+    int i,ca;
+    scanf("%d",&ca);
+    while(ca--)
+    {
+        int n;
+        scanf("%d",&n);
+        for(i=0;i<18;i++)
+            if(n<ft[i][0]) break;
+        printf("%d\n",ft[i-1][1]);
+    }
+}
+
+ZOJ 3194 Coverage
+排序一下再贪心，队友过的题目。
+
+ZOJ 3195 Design the city
+acyclic graph表示这个图是一个树。那么就可以使用一些树的特殊性质去做这个
+题目。这个题目是LCA问题。对于三个点A,B,C。其中必有lca(A,C)=lca(B,C)（字
+母的顺序调整一下即可）。确定哪个是A,B,C之
+后，那么就有K1=lca(A,B),K2=lca(B,C)。答案就是AK1+BK1+K1K2+CK2。
+
+由于题目的查询比较多，我是将LCA转化成RMQ之后再处理的。
+我的代码最后一个地方写得不是很好，很罗嗦，比赛的时候就是这样，见谅。
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+using namespace std;
+#define N 100005
+#define LOGN 17
+struct EDGE {
+    int a, b, next, w;
+};
+
+EDGE ET[2 * N + 10];
+int G[N], tot, len, sgn;
+int first[N], last[N], idx[N], dist[N];
+int M[3 * N][LOGN];
+bool v[N];
+int n, nq;
+int C[3 * N];
+
+void init();
+void dfs(int x, int d);
+void RMQ_init(int n);
+void once();
+void solve();
+void addedge(int a, int b, int w);
+int RMQ_query(int a, int b);
+int main()
+{
+    int be = 1;
+    freopen("in.txt", "r", stdin);
+    while(scanf("%d", &n) != EOF)
+    {
+        if(be)be=0;
+        else
+            printf("\n");
+        solve();
+    }
+}
+void solve() {
+    init();
+    dfs(1, 0);
+    RMQ_init(len);
+    once();
+}
+
+void addedge(int a, int b, int w) {
+    EDGE x = { a, b, G[a], w };
+    ET[tot] = x;
+    G[a] = tot++;
+}
+
+void init() {
+    int i, a, b, w;
+    len = sgn = tot = 0;
+    memset(G, -1, sizeof(G));
+    memset(v, 0, sizeof(v));
+    memset(C, 0, sizeof(C));
+    for (i = 0; i < n - 1; i++) {
+        scanf("%d%d%d", &a, &b, &w);
+        a++, b++;
+        addedge(a, b, w), addedge(b, a, w);
+    }
+}
+
+void dfs(int x, int d) {
+    int i, j, now;
+    dist[x] = d;
+    v[x] = 1, len++, sgn++, now = sgn;
+    first[x] = last[x] = len, M[len][0] = sgn, idx[sgn] = x;
+    for (j = G[x]; j != -1; j = ET[j].next) {
+        i = ET[j].b;
+        if (!v[i]) {
+            dfs(i, d + ET[j].w);
+            len++, M[len][0] = now, last[x] = len;
+        }
+    }
+}
+
+int RMQ_query(int i, int j) {
+    int d = j - i + 1;
+    int k, t;
+    for (k = 0, t = 1; (t << 1) < d; t <<= 1, k++)
+        ;
+    return M[i][k] <= M[j - t + 1][k] ? M[i][k] : M[j - t + 1][k];
+}
+void RMQ_init(int n) {
+    int i, j, k;//k = (1 << j) - 1
+    for (j = 1, k = 2; k <= n; j++, k <<= 1)
+        for (i = 0; i + k - 1 < n; i++)
+            M[i][j] = M[i][j - 1] < M[i + (k >> 1)][j - 1] ? M[i][j - 1]
+: M[i + (k >> 1)][j - 1];
+}
+
+void once() {
+    len += 1;
+    scanf("%d", &nq);
+    while (nq--) {
+        int a, b, c, pt, pt2, aa, bb, x1, x2, x3, l12, l23, l13, exg;
+        long long ans = 0;
+        scanf("%d%d%d", &x1, &x2, &x3);
+        x1++, x2++, x3++;
+        exg = 0;
+        if (first[x1] > first[x2]) swap(x1, x2), exg = 1;
+        aa = first[x1], bb = first[x2];
+        l12 = idx[RMQ_query(aa, bb)];
+        if (exg) swap(x1, x2);
+
+        exg = 0;
+        if (first[x2] > first[x3]) swap(x2, x3), exg = 1;
+        aa = first[x2], bb = first[x3];
+        l23 = idx[RMQ_query(aa, bb)];
+        if (exg) swap(x2, x3);
+
+        exg = 0;
+        if (first[x1] > first[x3]) swap(x1, x3), exg = 1;
+        aa = first[x1], bb = first[x3];
+        l13 = idx[RMQ_query(aa, bb)];
+        if (exg) swap(x1, x3);
+
+        if (l12 == l13) {
+            a = x2, b = x3, c = x1;
+        } else if (l12 == l23) {
+            a = x1, b = x3, c = x2;
+        } else {//l13== l23
+            a = x1, b = x2, c = x3;
+        }
+        exg = 0;
+        if (first[a] > first[b]) swap(a, b);
+        aa = first[a], bb = first[b];
+        pt = idx[RMQ_query(aa, bb)];
+        ans += dist[a] + dist[b] - 2 * dist[pt];
+
+        if (first[pt] > first[c]) swap(pt, c);
+        aa = first[pt], bb = first[c];
+        pt2 = idx[RMQ_query(aa, bb)];
+        ans += dist[pt] + dist[c] - 2 * dist[pt2];
+        printf("%lld\n", ans);
+
+    }
+}
+
+ZOJ 3196 Give me the result
+暴搜可以解决的问题。每次枚举使用一个符号，然后向下回溯搜索就可以了。注意
+使用long long。否则连续九个100是会暴int的。
+代码是队友写的。
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+const long long inf = 1000000000000000LL;
+int n, k;
+int a[20];
+long long ans;
+int ok(long long s) {
+    if (s == 0 && k == 0) return 0;
+    long long m = s;
+    while (m) {
+        if (m % 10 == k) return 0;
+        m /= 10;
+    }
+    return 1;
+}
+long long is(long long x) {
+    return x > 0 ? x : -x;
+}
+void dfs(long long s, int t) {
+    if (t >= n) {
+        if (ok(s)) ans = max(ans, s);
+        return;
+    }
+    dfs(s + a[t], t + 1);
+    dfs(is(s - a[t]), t + 1);
+    dfs(s * a[t], t + 1);
+    if (a[t] != 0) dfs(s / a[t], t + 1);
+}
+int main() {
+    int t;
+    scanf("%d", &t);
+    while (t--) {
+        scanf("%d%d", &n, &k);
+        for (int i = 0; i < n; i++)
+            scanf("%d", &a[i]);
+        ans = -inf;
+        dfs(a[0], 1);
+        if (ans != -inf) printf("%lld\n", ans);
+        else printf("No result\n");
+    }
+}
+
+ZOJ 3197 Google Book
+经典的贪心问题。先将区间排序，然后再贪心选取就可以了。
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+using namespace std;
+
+struct PAGE {
+    int a, b;
+    bool operator <(const PAGE &p) const {
+        if (a != p.a) return a < p.a;
+        return b < p.b;
+    }
+};
+
+#define N 5005
+PAGE book[N];
+void solve() {
+    int n, i, minp = 10000000, maxp = -1, ans = 0, curc;
+    scanf("%d", &n);
+    for (i = 0; i < n; i++) {
+        scanf("%d%d", &book[i].a, &book[i].b);
+        minp = min(minp, book[i].a);
+        maxp = max(maxp, book[i].b);
+    }
+    sort(book, book + n);
+    curc = minp;
+    i = 0;
+    while (curc <= maxp && i < n) {
+        int tt = curc;
+        while (book[i].a <= curc) {
+            if (book[i].b > tt) tt = book[i].b;
+            i++;
+        }
+        ans++;
+        curc = tt + 1;
+    }
+    printf("%d", ans);
+}
+int main() {
+    int T, be = 1;
+    scanf("%d", &T);
+    while (T--) {
+        if (be) be = 0;
+        else printf("\n");
+        solve();
+    }
+}
+
+ZOJ 3198 Intersection of Two Sets
+大水题。瞬间秒杀。
+
+ZOJ 3199 Longest Repeated Substring
+队友做的，用后缀数组，写得很麻烦。不懂。
+
+ZOJ 3200 Police and Thief
+虽然这个题目通过率很低，但是这个题没什么技巧。我是打表过的。对于每个n，
+都模拟这个贼的行走过程，算出贼到每个出口的概率。这个模拟要模拟到10*n*n步
+就可以了，这样用于模拟矩阵中间的数字就全部变成0了。
+算出概率后，将各个出口的概率排序，然后贪心，从最大的选取即可。注意精度问题。
+//用于打表的代码
+#include <cstdio>
+#include <cstring>
+#include <vector>
+#include <algorithm>
+using namespace std;
+#define N 100
+double g[2][N][N];
+int pre, cur, n;
+
+void mul() {
+    int i, j;
+    for (i = 0; i <= n + 2; i++)
+        for (j = 0; j <= n + 2; j++)
+            g[cur][i][j] = 0;
+    for (i = 1; i <= n + 2; i++) {
+        g[cur][1][i] = g[pre][1][i], g[cur][n + 2][i] = g[pre][n + 2][i];
+        g[cur][i][1] = g[pre][i][1], g[cur][i][n + 2] = g[pre][i][n + 2];
+    }
+    for (i = 2; i <= n + 1; i++) {
+        for (j = 2; j <= n + 1; j++) {
+            g[cur][i - 1][j] += g[pre][i][j] / 4.0;
+            g[cur][i + 1][j] += g[pre][i][j] / 4.0;
+            g[cur][i][j - 1] += g[pre][i][j] / 4.0;
+            g[cur][i][j + 1] += g[pre][i][j] / 4.0;
+        }
+    }
+
+}
+vector<double> list;
+vector<double> ans[35];
+int main() {
+    int i, j;
+    freopen("out.txt", "w", stdout);
+    for (n = 1; n <= 33; n+=2) {
+        memset(g, 0, sizeof(g));
+        pre = 0, cur = 1;
+        g[pre][n / 2 + 2][n / 2 + 2] = 100;
+        for (i = 0; i < 20*n*n; i++) {
+            mul();
+            pre = !pre, cur = !cur;
+        }
+        list.clear();
+        for (i = 2; i <= n + 1; i++) {
+            list.push_back(g[cur][i][1]);
+            list.push_back(g[cur][i][n+2]);
+            list.push_back(g[cur][1][i]);
+            list.push_back(g[cur][n+2][i]);
+        }
+        sort(list.begin(), list.end());
+        double sum = 0;
+        for(i = list.size()-1, j = 0; i >=0; i--, j++)
+        {
+            printf("ta[%d][%d]=%.6lf", n,j,list[i]);
+            if(i)
+                printf(",");
+            ans[n].push_back(list[i]);
+            sum += list[i];
+        }
+        printf(";\n");
+        //printf("%.3lf\n", sum);
+    }
+    return 0;
+}
+
+//用于上交的代码
+#include <cstdio>
+#include <cstring>
+#include <cmath>
+#define N 35
+double ta[35][150];
+void init()
+{
+    memset(ta, 0, sizeof(ta));
+   //将刚刚的那个打表程序的输出复制进来
+}
+
+int main()
+{
+    int T;
+    scanf("%d" ,&T);
+    init();
+    while(T--)
+    {
+        int n, i=0;
+        double p;
+        scanf("%d%lf", &n, &p);
+        double kk = 0;
+        while(kk < p)
+        {
+            kk+=ta[n][i];
+            i++;
+            if(fabs(kk - p) < 0.0001)
+                break;
+        }
+        printf("%d\n", i);
+    }
+    return 0;
+}
+
+ZOJ 3201 Tree of Tree
+队友做的Tree DP。他说是Tree DP再套一个背包问题。
+
+
+类别：Acm Zoj Report </novosbirsk/blog/category/Acm%20Zoj%20Report> | 添
+加到搜藏 <http://cang.baidu.com/do/add> | 浏览(866) | 评论 <#send> (16)
+ 
+上一篇：SCAU地信专业之囧况
+</novosbirsk/blog/item/4ca67854898765173a2935f8.html>    下一篇：用Wiki
+给自己搭建了一个写解题报...
+</novosbirsk/blog/item/ede7c2d3036114083af3cfe8.html>
+ 
+最近读者：
+	登录
+<https://passport.baidu.com/?login&tpl=sp&tpl_reg=sp&u=http%3A%2F
+%2Fhi.baidu.com%2Fnovosbirsk%2Fblog%2Fitem%2Ff4ddc5ad3cf8ec014b36d62f%252Ehtml>
+后，您就出现在这里。	</sukiclover>	</domisol%5Fhit>	</auhsr2346>
+</frankhb1989>	</dongliqian>	</winterlegend>	</hi%5Fchf>	</season09happy>	
+ 	 	SukiClover </sukiclover>	domisol_hit </domisol%5Fhit>	auhsr2346
+</auhsr2346>	幻の上帝 </frankhb1989>	topgun_007 </dongliqian>
+WinterLegend </winterlegend>	wukefe </hi%5Fchf>	season09happy
+</season09happy>	
+
+ 
+网友评论：
+1 	
+
+ad饕饕不绝 <http://hi.baidu.com/aekdycoin>
+	2009-05-03 19:09 | 回复 <#>
+a ...原来是大牛你啊~
+仰慕~
+
+ 
+2 	
+
+novosbirsk <http://hi.baidu.com/novosbirsk>
+	2009-05-03 20:01 | 回复 <#>
+回复ad饕饕不绝：大牛不敢当，菜鸟一个而已。
+
+ 
+3 	
+
+gba1991 <http://hi.baidu.com/leokan>
+	2009-05-03 20:19 | 回复 <#>
+ZOJ 3199 Longest Repeated Substring
+
+这个...不是后缀树的经典应用么？
+
+ 
+4 	
+
+novosbirsk <http://hi.baidu.com/novosbirsk>
+	2009-05-03 20:21 | 回复 <#>
+回复gba1991：惨，我都不会做。。。我们是后缀数组弄过去的，搞得超复杂。算
+了一下AC的代码的复杂度，似乎会高达n^2。
+我连后缀数组怎么弄都不会做
+
+ 
+5 	
+
+gba1991 <http://hi.baidu.com/leokan>
+	2009-05-03 20:34 | 回复 <#>
+n^2的复杂度...这样的后缀数组我还没见过...
+DC3 是 O(n)
+倍增是 O(nlogn)
+排序是 O(n^2logn)
+
+ 
+6 	
+
+novosbirsk <http://hi.baidu.com/novosbirsk>
+	2009-05-03 21:32 | 回复 <#>
+回复gba1991：是那个人做的时候扫描的问题。。。
+
+ 
+7 	
+网友:DieIng
+	2009-05-03 22:16 | 回复 <#>
+你想复杂了吧，差点也把我带入歧途了。。I64 solve(int A,int B,int C){
+I64 ANS = 0;
+ANS += Dist(A,B);
+ANS += Dist(B,C);
+ANS += Dist(A,C);
+ANS /= 2;
+return ANS;
+}
+
+这样就行了，每个边被统计了两次
+
+ 
+8 	
+网友:DieIng
+	2009-05-03 22:17 | 回复 <#>
+Orz 圆满牛
+
+ 
+9 	
+
+novosbirsk <http://hi.baidu.com/novosbirsk>
+	2009-05-03 22:37 | 回复 <#>
+回复DieIng：恩。好方法，的确简洁。膜拜
+
+ 
+10 	
+
+维托Vito <http://hi.baidu.com/ishowfun>
+	2009-05-03 22:39 | 回复 <#>
+大牛大牛
+
+ 
+11 	
+网友:lynncui
+	2009-05-03 23:03 | 回复 <#>
+终于find到你blog了，恭喜圆满
+可以叫你队友贴一下I题的代码么，今天被这题弄晕了，梦翅教了一下还是不太
+懂，dp不太过关，thx
+
+ 
+12 	
+
+novosbirsk <http://hi.baidu.com/novosbirsk>
+	2009-05-03 23:13 | 回复 <#>
+回复lynncui：上此人的blog有：
+http://hi.baidu.com/findthegateopen
+
+ 
+13 	
+网友:lynncui
+	2009-05-03 23:15 | 回复 <#>
+回复novosbirsk：thx
+
+ 
+14 	
+
+dragon_eric123 <http://hi.baidu.com/dragon_eric123>
+	2009-05-03 23:23 | 回复 <#>
+回复DieIng：赞..我想不到
+
+ 
+15 	
+
+whuwinnie <http://hi.baidu.com/whuwinnie>
+	2009-05-05 10:51 | 回复 <#>
+orz神牛
+
+ 
+16 	
+网友:打酱油
+	2009-05-05 12:50 | 回复 <#>
+orz
+
+ 
+发表评论：
+姓　名： 	   注册 <http://hi.baidu.com/st/reg.html> | 登录
+<https://passport.baidu.com/?login&tpl=sp&tpl_reg=sp&u=http%3A%2F%2Fhi.baidu.com%2Fnovosbirsk%2Fblog%2Fitem%2Ff4ddc5ad3cf8ec014b36d62f%252Ehtml>
+
+*姓名最长为50字节
+  	
+网址或邮箱： 	(选填)
+  	
+内　容： 	
+插入表情
+
+  	
+验证码： 	请点击后输入四位验证码，字母不区分大小写
+看不清? <#>
+  	    取消回复 <#>
+
+
+  	  	 
+
+	  	
+  	
+相关文章
+		 
+
+无相关文章
+
+请访问百度空间首页 <http://hi.baidu.com/>欣赏更多文章和精彩图片。
+  	  	 
+
+
+&#169;2009 Baidu
+

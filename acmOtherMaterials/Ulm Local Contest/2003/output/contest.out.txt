@@ -1,0 +1,932 @@
+Case 1
+Average solution time = 10.00
+Problem 1 is solved by member 1 from 0 to 10
+
+Case 2
+Average solution time = 10.00
+Problem 1 is solved by member 1 from 0 to 10
+
+Case 3
+Average solution time = 20.00
+Problem 1 is solved by member 1 from 0 to 20
+
+Case 4
+Average solution time = 10.00
+Problem 1 is solved by member 1 from 0 to 10
+
+Case 5
+Average solution time = 50.00
+Problem 1 is solved by member 1 from 0 to 50
+
+Case 6
+Average solution time = 110.00
+Problem 1 is solved by member 1 from 70 to 150
+Problem 2 is solved by member 1 from 0 to 70
+
+Case 7
+Average solution time = 50.00
+Problem 1 is solved by member 2 from 0 to 50
+
+Case 8
+Average solution time = 50.00
+Problem 1 is solved by member 1 from 0 to 50
+
+Case 9
+Average solution time = 50.00
+Problem 1 is solved by member 2 from 0 to 50
+
+Case 10
+Average solution time = 50.00
+Problem 1 is solved by member 2 from 0 to 50
+
+Case 11
+Average solution time = 50.00
+Problem 1 is solved by member 1 from 0 to 50
+
+Case 12
+Average solution time = 50.00
+Problem 1 is solved by member 1 from 0 to 50
+
+Case 13
+Average solution time = 50.00
+Problem 1 is solved by member 2 from 0 to 50
+
+Case 14
+Average solution time = 50.00
+Problem 1 is solved by member 1 from 0 to 50
+
+Case 15
+Average solution time = 50.00
+Problem 1 is solved by member 1 from 0 to 50
+
+Case 16
+Average solution time = 50.00
+Problem 1 is solved by member 1 from 0 to 50
+
+Case 17
+Average solution time = 7.75
+Problem 1 is solved by member 2 from 0 to 4
+Problem 2 is solved by member 1 from 0 to 3
+Problem 3 is solved by member 1 from 3 to 13
+Problem 4 is solved by member 2 from 4 to 11
+
+Case 18
+Average solution time = 35.40
+Problem 1 is solved by member 3 from 19 to 49
+Problem 2 is solved by member 2 from 0 to 25
+Problem 3 is solved by member 3 from 0 to 19
+Problem 4 is solved by member 2 from 25 to 66
+Problem 5 is solved by member 1 from 0 to 18
+
+Case 19
+Average solution time = 114.14
+Problem 1 is solved by member 1 from 0 to 13
+Problem 2 is solved by member 1 from 37 to 66
+Problem 3 is solved by member 1 from 133 to 186
+Problem 4 is solved by member 1 from 99 to 133
+Problem 5 is solved by member 1 from 13 to 37
+Problem 6 is solved by member 1 from 186 to 265
+Problem 7 is solved by member 1 from 66 to 99
+
+Case 20
+Average solution time = 49.25
+Problem 1 is solved by member 1 from 0 to 3
+Problem 2 is solved by member 2 from 19 to 78
+Problem 3 is solved by member 2 from 0 to 19
+Problem 4 is solved by member 1 from 3 to 97
+
+Case 21
+Average solution time = 103.44
+Problem 1 is solved by member 2 from 0 to 19
+Problem 2 is solved by member 2 from 122 to 202
+Problem 3 is solved by member 1 from 163 to 248
+Problem 4 is solved by member 1 from 0 to 13
+Problem 5 is solved by member 1 from 13 to 33
+Problem 6 is solved by member 2 from 48 to 122
+Problem 7 is solved by member 1 from 83 to 163
+Problem 8 is solved by member 2 from 19 to 48
+Problem 9 is solved by member 1 from 33 to 83
+
+Case 22
+Average solution time = 46.00
+Problem 1 is solved by member 2 from 26 to 77
+Problem 2 is solved by member 1 from 0 to 7
+Problem 3 is solved by member 1 from 7 to 23
+Problem 4 is solved by member 2 from 0 to 26
+Problem 5 is solved by member 1 from 23 to 97
+
+Case 23
+Average solution time = 47.00
+Problem 1 is solved by member 1 from 1 to 40
+Problem 2 is solved by member 1 from 0 to 1
+Problem 3 is solved by member 2 from 0 to 24
+Problem 4 is solved by member 1 from 40 to 123
+
+Case 24
+Average solution time = 189.38
+Problem 1 is solved by member 1 from 92 to 129
+Problem 2 is solved by member 1 from 189 to 255
+Problem 3 is solved by member 1 from 58 to 92
+Problem 4 is solved by member 1 from 0 to 26
+Problem 5 is solved by member 1 from 340 to 426
+Problem 6 is solved by member 1 from 255 to 340
+Problem 7 is solved by member 1 from 26 to 58
+Problem 8 is solved by member 1 from 129 to 189
+
+Case 25
+Average solution time = 51.25
+Problem 1 is solved by member 2 from 46 to 138
+Problem 2 is solved by member 2 from 5 to 17
+Problem 3 is solved by member 1 from 7 to 31
+Problem 4 is solved by member 1 from 56 to 110
+Problem 5 is solved by member 1 from 31 to 56
+Problem 6 is solved by member 1 from 0 to 7
+Problem 7 is solved by member 2 from 17 to 46
+Problem 8 is solved by member 2 from 0 to 5
+
+Case 26
+Average solution time = 50.00
+Problem 1 is solved by member 1 from 0 to 4
+Problem 2 is solved by member 2 from 0 to 96
+
+Case 27
+Average solution time = 43.00
+Problem 1 is solved by member 3 from 18 to 57
+Problem 2 is solved by member 3 from 0 to 18
+Problem 3 is solved by member 1 from 0 to 58
+Problem 4 is solved by member 2 from 27 to 55
+Problem 5 is solved by member 2 from 0 to 27
+
+Case 28
+Average solution time = 59.13
+Problem 1 is solved by member 3 from 0 to 23
+Problem 2 is solved by member 2 from 0 to 18
+Problem 3 is solved by member 3 from 23 to 115
+Problem 4 is solved by member 2 from 48 to 144
+Problem 5 is solved by member 2 from 18 to 48
+Problem 6 is solved by member 1 from 0 to 3
+Problem 7 is solved by member 1 from 25 to 97
+Problem 8 is solved by member 1 from 3 to 25
+
+Case 29
+Average solution time = 66.75
+Problem 1 is solved by member 2 from 31 to 95
+Problem 2 is solved by member 2 from 0 to 31
+Problem 3 is solved by member 1 from 66 to 127
+Problem 4 is solved by member 1 from 0 to 13
+Problem 5 is solved by member 3 from 67 to 104
+Problem 6 is solved by member 1 from 13 to 66
+Problem 7 is solved by member 3 from 31 to 67
+Problem 8 is solved by member 3 from 0 to 31
+
+Case 30
+Average solution time = 64.25
+Problem 1 is solved by member 1 from 28 to 79
+Problem 2 is solved by member 1 from 1 to 28
+Problem 3 is solved by member 1 from 0 to 1
+Problem 4 is solved by member 1 from 79 to 149
+
+Case 31
+Average solution time = 45.60
+Problem 1 is solved by member 1 from 7 to 15
+Problem 2 is solved by member 1 from 15 to 24
+Problem 3 is solved by member 2 from 30 to 62
+Problem 4 is solved by member 1 from 24 to 37
+Problem 5 is solved by member 3 from 40 to 128
+Problem 6 is solved by member 1 from 0 to 7
+Problem 7 is solved by member 3 from 0 to 40
+Problem 8 is solved by member 2 from 0 to 2
+Problem 9 is solved by member 1 from 37 to 111
+Problem 10 is solved by member 2 from 2 to 30
+
+Case 32
+Average solution time = 88.00
+Problem 1 is solved by member 2 from 0 to 88
+
+Case 33
+Average solution time = 52.25
+Problem 1 is solved by member 2 from 0 to 74
+Problem 2 is solved by member 1 from 0 to 8
+Problem 3 is solved by member 3 from 0 to 61
+Problem 4 is solved by member 1 from 8 to 66
+
+Case 34
+Average solution time = 78.00
+Problem 1 is solved by member 2 from 52 to 82
+Problem 2 is solved by member 2 from 115 to 171
+Problem 3 is solved by member 2 from 24 to 52
+Problem 4 is solved by member 2 from 0 to 24
+Problem 5 is solved by member 1 from 0 to 24
+Problem 6 is solved by member 2 from 82 to 115
+
+Case 35
+Average solution time = 38.00
+Problem 1 is solved by member 2 from 0 to 23
+Problem 2 is solved by member 1 from 0 to 51
+Problem 3 is solved by member 3 from 0 to 9
+Problem 4 is solved by member 2 from 23 to 69
+
+Case 36
+Average solution time = 41.50
+Problem 1 is solved by member 2 from 0 to 6
+Problem 2 is solved by member 1 from 14 to 50
+Problem 3 is solved by member 1 from 0 to 14
+Problem 4 is solved by member 2 from 6 to 96
+
+Case 37
+Average solution time = 267.30
+Problem 1 is solved by member 1 from 108 to 157
+Problem 2 is solved by member 1 from 157 to 206
+Problem 3 is solved by member 1 from 259 to 321
+Problem 4 is solved by member 1 from 31 to 64
+Problem 5 is solved by member 1 from 321 to 412
+Problem 6 is solved by member 1 from 64 to 108
+Problem 7 is solved by member 1 from 206 to 259
+Problem 8 is solved by member 1 from 412 to 508
+Problem 9 is solved by member 1 from 0 to 31
+Problem 10 is solved by member 1 from 508 to 607
+
+Case 38
+Average solution time = 67.50
+Problem 1 is solved by member 2 from 0 to 82
+Problem 2 is solved by member 1 from 0 to 53
+
+Case 39
+Average solution time = 120.29
+Problem 1 is solved by member 1 from 206 to 268
+Problem 2 is solved by member 1 from 107 to 152
+Problem 3 is solved by member 1 from 8 to 32
+Problem 4 is solved by member 1 from 69 to 107
+Problem 5 is solved by member 1 from 152 to 206
+Problem 6 is solved by member 1 from 32 to 69
+Problem 7 is solved by member 1 from 0 to 8
+
+Case 40
+Average solution time = 50.75
+Problem 1 is solved by member 1 from 23 to 54
+Problem 2 is solved by member 1 from 54 to 96
+Problem 3 is solved by member 2 from 0 to 4
+Problem 4 is solved by member 1 from 0 to 9
+Problem 5 is solved by member 1 from 9 to 23
+Problem 6 is solved by member 2 from 4 to 17
+Problem 7 is solved by member 2 from 17 to 61
+Problem 8 is solved by member 2 from 61 to 142
+
+Case 41
+Average solution time = 60.10
+Problem 1 is solved by member 2 from 0 to 2
+Problem 2 is solved by member 2 from 84 to 132
+Problem 3 is solved by member 2 from 13 to 42
+Problem 4 is solved by member 1 from 86 to 182
+Problem 5 is solved by member 2 from 2 to 13
+Problem 6 is solved by member 1 from 0 to 1
+Problem 7 is solved by member 1 from 15 to 44
+Problem 8 is solved by member 1 from 1 to 15
+Problem 9 is solved by member 2 from 42 to 84
+Problem 10 is solved by member 1 from 44 to 86
+
+Case 42
+Average solution time = 29.33
+Problem 1 is solved by member 3 from 0 to 12
+Problem 2 is solved by member 2 from 0 to 29
+Problem 3 is solved by member 1 from 0 to 47
+
+Case 43
+Average solution time = 56.00
+Problem 1 is solved by member 2 from 17 to 81
+Problem 2 is solved by member 1 from 0 to 70
+Problem 3 is solved by member 2 from 0 to 17
+
+Case 44
+Average solution time = 54.30
+Problem 1 is solved by member 2 from 56 to 92
+Problem 2 is solved by member 3 from 55 to 122
+Problem 3 is solved by member 1 from 15 to 48
+Problem 4 is solved by member 3 from 23 to 55
+Problem 5 is solved by member 2 from 27 to 56
+Problem 6 is solved by member 1 from 2 to 15
+Problem 7 is solved by member 3 from 0 to 23
+Problem 8 is solved by member 1 from 48 to 103
+Problem 9 is solved by member 2 from 0 to 27
+Problem 10 is solved by member 1 from 0 to 2
+
+Case 45
+Average solution time = 29.00
+Problem 1 is solved by member 3 from 0 to 29
+
+Case 46
+Average solution time = 134.00
+Problem 1 is solved by member 1 from 38 to 133
+Problem 2 is solved by member 1 from 0 to 38
+Problem 3 is solved by member 1 from 133 to 231
+
+Case 47
+Average solution time = 54.00
+Problem 1 is solved by member 1 from 0 to 54
+
+Case 48
+Average solution time = 128.40
+Problem 1 is solved by member 1 from 64 to 115
+Problem 2 is solved by member 1 from 29 to 64
+Problem 3 is solved by member 1 from 115 to 176
+Problem 4 is solved by member 1 from 176 to 258
+Problem 5 is solved by member 1 from 0 to 29
+
+Case 49
+Average solution time = 73.25
+Problem 1 is solved by member 3 from 24 to 116
+Problem 2 is solved by member 2 from 0 to 56
+Problem 3 is solved by member 1 from 0 to 97
+Problem 4 is solved by member 3 from 0 to 24
+
+Case 50
+Average solution time = 102.50
+Problem 1 is solved by member 1 from 118 to 196
+Problem 2 is solved by member 1 from 29 to 67
+Problem 3 is solved by member 1 from 67 to 118
+Problem 4 is solved by member 1 from 0 to 29
+
+Case 51
+Average solution time = 59.10
+Problem 1 is solved by member 3 from 23 to 70
+Problem 2 is solved by member 2 from 28 to 56
+Problem 3 is solved by member 2 from 3 to 28
+Problem 4 is solved by member 3 from 0 to 23
+Problem 5 is solved by member 1 from 43 to 100
+Problem 6 is solved by member 2 from 0 to 3
+Problem 7 is solved by member 1 from 0 to 21
+Problem 8 is solved by member 2 from 56 to 118
+Problem 9 is solved by member 1 from 21 to 43
+Problem 10 is solved by member 3 from 70 to 129
+
+Case 52
+Average solution time = 96.33
+Problem 1 is solved by member 1 from 27 to 89
+Problem 2 is solved by member 1 from 0 to 27
+Problem 3 is solved by member 1 from 89 to 173
+
+Case 53
+Average solution time = 139.38
+Problem 1 is solved by member 2 from 0 to 65
+Problem 2 is solved by member 1 from 93 to 138
+Problem 3 is solved by member 1 from 138 to 184
+Problem 4 is solved by member 1 from 0 to 19
+Problem 5 is solved by member 1 from 240 to 327
+Problem 6 is solved by member 1 from 184 to 240
+Problem 7 is solved by member 1 from 49 to 93
+Problem 8 is solved by member 1 from 19 to 49
+
+Case 54
+Average solution time = 77.30
+Problem 1 is solved by member 1 from 101 to 154
+Problem 2 is solved by member 2 from 35 to 72
+Problem 3 is solved by member 2 from 111 to 191
+Problem 4 is solved by member 1 from 34 to 65
+Problem 5 is solved by member 1 from 0 to 8
+Problem 6 is solved by member 2 from 2 to 35
+Problem 7 is solved by member 1 from 65 to 101
+Problem 8 is solved by member 2 from 0 to 2
+Problem 9 is solved by member 2 from 72 to 111
+Problem 10 is solved by member 1 from 8 to 34
+
+Case 55
+Average solution time = 219.30
+Problem 1 is solved by member 1 from 29 to 65
+Problem 2 is solved by member 1 from 151 to 215
+Problem 3 is solved by member 1 from 104 to 151
+Problem 4 is solved by member 1 from 65 to 104
+Problem 5 is solved by member 1 from 5 to 29
+Problem 6 is solved by member 1 from 215 to 281
+Problem 7 is solved by member 1 from 359 to 442
+Problem 8 is solved by member 1 from 281 to 359
+Problem 9 is solved by member 1 from 442 to 542
+Problem 10 is solved by member 1 from 0 to 5
+
+Case 56
+Average solution time = 70.50
+Problem 1 is solved by member 1 from 0 to 72
+Problem 2 is solved by member 2 from 0 to 69
+
+Case 57
+Average solution time = 35.83
+Problem 1 is solved by member 2 from 28 to 65
+Problem 2 is solved by member 1 from 19 to 88
+Problem 3 is solved by member 1 from 0 to 3
+Problem 4 is solved by member 1 from 3 to 19
+Problem 5 is solved by member 2 from 12 to 28
+Problem 6 is solved by member 2 from 0 to 12
+
+Case 58
+Average solution time = 35.13
+Problem 1 is solved by member 3 from 14 to 90
+Problem 2 is solved by member 2 from 2 to 15
+Problem 3 is solved by member 1 from 34 to 82
+Problem 4 is solved by member 1 from 2 to 34
+Problem 5 is solved by member 2 from 0 to 2
+Problem 6 is solved by member 3 from 0 to 14
+Problem 7 is solved by member 1 from 0 to 2
+Problem 8 is solved by member 2 from 15 to 42
+
+Case 59
+Average solution time = 103.25
+Problem 1 is solved by member 1 from 0 to 26
+Problem 2 is solved by member 1 from 26 to 68
+Problem 3 is solved by member 1 from 122 to 197
+Problem 4 is solved by member 1 from 68 to 122
+
+Case 60
+Average solution time = 47.00
+Problem 1 is solved by member 1 from 0 to 47
+
+Case 61
+Average solution time = 28.67
+Problem 1 is solved by member 2 from 0 to 18
+Problem 2 is solved by member 3 from 0 to 15
+Problem 3 is solved by member 2 from 18 to 53
+
+Case 62
+Average solution time = 85.00
+Problem 1 is solved by member 1 from 0 to 85
+
+Case 63
+Average solution time = 150.75
+Problem 1 is solved by member 1 from 0 to 4
+Problem 2 is solved by member 1 from 222 to 301
+Problem 3 is solved by member 1 from 9 to 34
+Problem 4 is solved by member 1 from 301 to 391
+Problem 5 is solved by member 1 from 34 to 91
+Problem 6 is solved by member 1 from 91 to 154
+Problem 7 is solved by member 1 from 154 to 222
+Problem 8 is solved by member 1 from 4 to 9
+
+Case 64
+Average solution time = 46.43
+Problem 1 is solved by member 3 from 14 to 60
+Problem 2 is solved by member 1 from 0 to 22
+Problem 3 is solved by member 2 from 0 to 24
+Problem 4 is solved by member 3 from 0 to 14
+Problem 5 is solved by member 1 from 48 to 87
+Problem 6 is solved by member 2 from 24 to 70
+Problem 7 is solved by member 1 from 22 to 48
+
+Case 65
+Average solution time = 114.90
+Problem 1 is solved by member 1 from 0 to 1
+Problem 2 is solved by member 1 from 7 to 24
+Problem 3 is solved by member 1 from 1 to 7
+Problem 4 is solved by member 1 from 187 to 285
+Problem 5 is solved by member 1 from 110 to 187
+Problem 6 is solved by member 2 from 151 to 250
+Problem 7 is solved by member 2 from 75 to 151
+Problem 8 is solved by member 1 from 59 to 110
+Problem 9 is solved by member 1 from 24 to 59
+Problem 10 is solved by member 2 from 0 to 75
+
+Case 66
+Average solution time = 109.88
+Problem 1 is solved by member 1 from 21 to 44
+Problem 2 is solved by member 1 from 0 to 9
+Problem 3 is solved by member 1 from 44 to 72
+Problem 4 is solved by member 1 from 9 to 21
+Problem 5 is solved by member 1 from 100 to 147
+Problem 6 is solved by member 1 from 147 to 205
+Problem 7 is solved by member 1 from 72 to 100
+Problem 8 is solved by member 1 from 205 to 281
+
+Case 67
+Average solution time = 59.00
+Problem 1 is solved by member 1 from 70 to 124
+Problem 2 is solved by member 1 from 29 to 70
+Problem 3 is solved by member 1 from 0 to 13
+Problem 4 is solved by member 1 from 13 to 29
+
+Case 68
+Average solution time = 122.33
+Problem 1 is solved by member 1 from 73 to 130
+Problem 2 is solved by member 1 from 0 to 20
+Problem 3 is solved by member 1 from 198 to 272
+Problem 4 is solved by member 1 from 130 to 198
+Problem 5 is solved by member 1 from 41 to 73
+Problem 6 is solved by member 1 from 20 to 41
+
+Case 69
+Average solution time = 85.00
+Problem 1 is solved by member 1 from 0 to 85
+
+Case 70
+Average solution time = 90.50
+Problem 1 is solved by member 1 from 0 to 23
+Problem 2 is solved by member 1 from 104 to 173
+Problem 3 is solved by member 1 from 23 to 62
+Problem 4 is solved by member 1 from 62 to 104
+
+Case 71
+Average solution time = 67.80
+Problem 1 is solved by member 2 from 38 to 132
+Problem 2 is solved by member 2 from 0 to 12
+Problem 3 is solved by member 1 from 0 to 49
+Problem 4 is solved by member 1 from 49 to 108
+Problem 5 is solved by member 2 from 12 to 38
+
+Case 72
+Average solution time = 48.75
+Problem 1 is solved by member 3 from 0 to 29
+Problem 2 is solved by member 2 from 0 to 78
+Problem 3 is solved by member 1 from 19 to 69
+Problem 4 is solved by member 1 from 0 to 19
+
+Case 73
+Average solution time = 6.50
+Problem 1 is solved by member 1 from 1 to 12
+Problem 2 is solved by member 1 from 0 to 1
+
+Case 74
+Average solution time = 63.75
+Problem 1 is solved by member 1 from 0 to 35
+Problem 2 is solved by member 2 from 0 to 34
+Problem 3 is solved by member 1 from 35 to 112
+Problem 4 is solved by member 3 from 0 to 74
+
+Case 75
+Average solution time = 61.40
+Problem 1 is solved by member 1 from 0 to 13
+Problem 2 is solved by member 2 from 22 to 44
+Problem 3 is solved by member 1 from 27 to 51
+Problem 4 is solved by member 1 from 13 to 27
+Problem 5 is solved by member 2 from 4 to 22
+Problem 6 is solved by member 1 from 51 to 134
+Problem 7 is solved by member 2 from 70 to 98
+Problem 8 is solved by member 2 from 44 to 70
+Problem 9 is solved by member 2 from 98 to 151
+Problem 10 is solved by member 2 from 0 to 4
+
+Case 76
+Average solution time = 41.00
+Problem 1 is solved by member 1 from 23 to 59
+Problem 2 is solved by member 1 from 0 to 23
+
+Case 77
+Average solution time = 219.33
+Problem 1 is solved by member 1 from 394 to 494
+Problem 2 is solved by member 1 from 31 to 64
+Problem 3 is solved by member 1 from 316 to 394
+Problem 4 is solved by member 1 from 98 to 141
+Problem 5 is solved by member 1 from 64 to 98
+Problem 6 is solved by member 1 from 249 to 316
+Problem 7 is solved by member 1 from 0 to 31
+Problem 8 is solved by member 1 from 141 to 187
+Problem 9 is solved by member 1 from 187 to 249
+
+Case 78
+Average solution time = 199.14
+Problem 1 is solved by member 1 from 118 to 182
+Problem 2 is solved by member 1 from 19 to 61
+Problem 3 is solved by member 1 from 61 to 118
+Problem 4 is solved by member 1 from 256 to 338
+Problem 5 is solved by member 1 from 182 to 256
+Problem 6 is solved by member 1 from 338 to 420
+Problem 7 is solved by member 1 from 0 to 19
+
+Case 79
+Average solution time = 72.86
+Problem 1 is solved by member 2 from 32 to 67
+Problem 2 is solved by member 1 from 76 to 143
+Problem 3 is solved by member 2 from 67 to 157
+Problem 4 is solved by member 1 from 27 to 76
+Problem 5 is solved by member 2 from 8 to 32
+Problem 6 is solved by member 1 from 0 to 27
+Problem 7 is solved by member 2 from 0 to 8
+
+Case 80
+Average solution time = 150.83
+Problem 1 is solved by member 1 from 96 to 175
+Problem 2 is solved by member 1 from 0 to 5
+Problem 3 is solved by member 1 from 18 to 96
+Problem 4 is solved by member 1 from 261 to 350
+Problem 5 is solved by member 1 from 5 to 18
+Problem 6 is solved by member 1 from 175 to 261
+
+Case 81
+Average solution time = 40.00
+Problem 1 is solved by member 1 from 0 to 4
+Problem 2 is solved by member 1 from 4 to 76
+
+Case 82
+Average solution time = 61.25
+Problem 1 is solved by member 3 from 0 to 1
+Problem 2 is solved by member 3 from 1 to 30
+Problem 3 is solved by member 3 from 64 to 113
+Problem 4 is solved by member 1 from 0 to 85
+Problem 5 is solved by member 3 from 30 to 64
+Problem 6 is solved by member 2 from 62 to 133
+Problem 7 is solved by member 2 from 2 to 62
+Problem 8 is solved by member 2 from 0 to 2
+
+Case 83
+Average solution time = 190.14
+Problem 1 is solved by member 1 from 68 to 107
+Problem 2 is solved by member 1 from 161 to 228
+Problem 3 is solved by member 1 from 107 to 161
+Problem 4 is solved by member 1 from 228 to 318
+Problem 5 is solved by member 1 from 318 to 416
+Problem 6 is solved by member 1 from 0 to 33
+Problem 7 is solved by member 1 from 33 to 68
+
+Case 84
+Average solution time = 48.00
+Problem 1 is solved by member 1 from 0 to 48
+
+Case 85
+Average solution time = 67.00
+Problem 1 is solved by member 1 from 0 to 67
+
+Case 86
+Average solution time = 35.13
+Problem 1 is solved by member 1 from 0 to 1
+Problem 2 is solved by member 2 from 0 to 12
+Problem 3 is solved by member 2 from 44 to 64
+Problem 4 is solved by member 2 from 26 to 44
+Problem 5 is solved by member 1 from 1 to 6
+Problem 6 is solved by member 2 from 64 to 92
+Problem 7 is solved by member 1 from 6 to 36
+Problem 8 is solved by member 2 from 12 to 26
+
+Case 87
+Average solution time = 30.00
+Problem 1 is solved by member 1 from 8 to 52
+Problem 2 is solved by member 1 from 0 to 8
+
+Case 88
+Average solution time = 44.20
+Problem 1 is solved by member 2 from 5 to 31
+Problem 2 is solved by member 1 from 18 to 37
+Problem 3 is solved by member 2 from 0 to 1
+Problem 4 is solved by member 2 from 31 to 57
+Problem 5 is solved by member 2 from 57 to 156
+Problem 6 is solved by member 1 from 37 to 131
+Problem 7 is solved by member 1 from 0 to 2
+Problem 8 is solved by member 1 from 2 to 4
+Problem 9 is solved by member 2 from 1 to 5
+Problem 10 is solved by member 1 from 4 to 18
+
+Case 89
+Average solution time = 125.40
+Problem 1 is solved by member 1 from 31 to 65
+Problem 2 is solved by member 1 from 112 to 177
+Problem 3 is solved by member 1 from 0 to 31
+Problem 4 is solved by member 1 from 65 to 112
+Problem 5 is solved by member 1 from 177 to 242
+
+Case 90
+Average solution time = 248.44
+Problem 1 is solved by member 1 from 99 to 156
+Problem 2 is solved by member 1 from 365 to 453
+Problem 3 is solved by member 1 from 453 to 551
+Problem 4 is solved by member 1 from 224 to 293
+Problem 5 is solved by member 1 from 293 to 365
+Problem 6 is solved by member 2 from 0 to 48
+Problem 7 is solved by member 1 from 0 to 47
+Problem 8 is solved by member 1 from 156 to 224
+Problem 9 is solved by member 1 from 47 to 99
+
+Case 91
+Average solution time = 126.29
+Problem 1 is solved by member 1 from 35 to 62
+Problem 2 is solved by member 1 from 62 to 111
+Problem 3 is solved by member 1 from 10 to 35
+Problem 4 is solved by member 1 from 0 to 10
+Problem 5 is solved by member 1 from 163 to 216
+Problem 6 is solved by member 1 from 216 to 287
+Problem 7 is solved by member 1 from 111 to 163
+
+Case 92
+Average solution time = 223.50
+Problem 1 is solved by member 1 from 442 to 523
+Problem 2 is solved by member 1 from 362 to 442
+Problem 3 is solved by member 1 from 287 to 362
+Problem 4 is solved by member 1 from 113 to 162
+Problem 5 is solved by member 1 from 17 to 38
+Problem 6 is solved by member 1 from 38 to 72
+Problem 7 is solved by member 1 from 219 to 287
+Problem 8 is solved by member 1 from 72 to 113
+Problem 9 is solved by member 1 from 162 to 219
+Problem 10 is solved by member 1 from 0 to 17
+
+Case 93
+Average solution time = 149.00
+Problem 1 is solved by member 1 from 64 to 144
+Problem 2 is solved by member 1 from 0 to 64
+Problem 3 is solved by member 1 from 144 to 239
+
+Case 94
+Average solution time = 20.75
+Problem 1 is solved by member 2 from 0 to 2
+Problem 2 is solved by member 1 from 0 to 28
+Problem 3 is solved by member 2 from 2 to 18
+Problem 4 is solved by member 3 from 0 to 35
+
+Case 95
+Average solution time = 30.00
+Problem 1 is solved by member 2 from 0 to 30
+
+Case 96
+Average solution time = 67.13
+Problem 1 is solved by member 2 from 58 to 89
+Problem 2 is solved by member 2 from 29 to 58
+Problem 3 is solved by member 1 from 0 to 35
+Problem 4 is solved by member 1 from 70 to 131
+Problem 5 is solved by member 2 from 89 to 120
+Problem 6 is solved by member 2 from 5 to 29
+Problem 7 is solved by member 1 from 35 to 70
+Problem 8 is solved by member 2 from 0 to 5
+
+Case 97
+Average solution time = 51.17
+Problem 1 is solved by member 3 from 16 to 40
+Problem 2 is solved by member 3 from 5 to 16
+Problem 3 is solved by member 3 from 40 to 74
+Problem 4 is solved by member 2 from 0 to 78
+Problem 5 is solved by member 3 from 0 to 5
+Problem 6 is solved by member 1 from 0 to 94
+
+Case 98
+Average solution time = 71.00
+Problem 1 is solved by member 2 from 0 to 77
+Problem 2 is solved by member 1 from 0 to 65
+
+Case 99
+Average solution time = 48.50
+Problem 1 is solved by member 1 from 12 to 66
+Problem 2 is solved by member 1 from 0 to 12
+Problem 3 is solved by member 3 from 0 to 9
+Problem 4 is solved by member 3 from 9 to 79
+Problem 5 is solved by member 2 from 0 to 28
+Problem 6 is solved by member 2 from 28 to 97
+
+Case 100
+Average solution time = 83.00
+Problem 1 is solved by member 1 from 72 to 120
+Problem 2 is solved by member 1 from 0 to 34
+Problem 3 is solved by member 2 from 20 to 110
+Problem 4 is solved by member 2 from 0 to 5
+Problem 5 is solved by member 1 from 34 to 72
+Problem 6 is solved by member 2 from 5 to 20
+Problem 7 is solved by member 1 from 120 to 220
+
+Case 101
+Average solution time = 60.70
+Problem 1 is solved by member 3 from 17 to 82
+Problem 2 is solved by member 3 from 0 to 17
+Problem 3 is solved by member 2 from 0 to 13
+Problem 4 is solved by member 1 from 45 to 70
+Problem 5 is solved by member 2 from 64 to 118
+Problem 6 is solved by member 1 from 26 to 45
+Problem 7 is solved by member 2 from 13 to 64
+Problem 8 is solved by member 1 from 70 to 162
+Problem 9 is solved by member 1 from 10 to 26
+Problem 10 is solved by member 1 from 0 to 10
+
+Case 102
+Average solution time = 72.88
+Problem 1 is solved by member 3 from 0 to 42
+Problem 2 is solved by member 1 from 18 to 61
+Problem 3 is solved by member 1 from 0 to 18
+Problem 4 is solved by member 3 from 42 to 130
+Problem 5 is solved by member 2 from 0 to 4
+Problem 6 is solved by member 2 from 4 to 42
+Problem 7 is solved by member 1 from 61 to 153
+Problem 8 is solved by member 2 from 42 to 133
+
+Case 103
+Average solution time = 99.00
+Problem 1 is solved by member 1 from 39 to 70
+Problem 2 is solved by member 1 from 4 to 11
+Problem 3 is solved by member 1 from 70 to 113
+Problem 4 is solved by member 1 from 0 to 4
+Problem 5 is solved by member 1 from 182 to 274
+Problem 6 is solved by member 1 from 11 to 39
+Problem 7 is solved by member 1 from 113 to 182
+
+Case 104
+Average solution time = 144.29
+Problem 1 is solved by member 1 from 173 to 253
+Problem 2 is solved by member 1 from 73 to 123
+Problem 3 is solved by member 1 from 41 to 73
+Problem 4 is solved by member 1 from 14 to 41
+Problem 5 is solved by member 1 from 253 to 333
+Problem 6 is solved by member 1 from 0 to 14
+Problem 7 is solved by member 1 from 123 to 173
+
+Case 105
+Average solution time = 33.43
+Problem 1 is solved by member 2 from 16 to 56
+Problem 2 is solved by member 1 from 0 to 34
+Problem 3 is solved by member 2 from 7 to 16
+Problem 4 is solved by member 3 from 0 to 17
+Problem 5 is solved by member 2 from 0 to 3
+Problem 6 is solved by member 2 from 3 to 7
+Problem 7 is solved by member 3 from 17 to 101
+
+Case 106
+Average solution time = 167.40
+Problem 1 is solved by member 1 from 148 to 231
+Problem 2 is solved by member 1 from 231 to 328
+Problem 3 is solved by member 1 from 0 to 41
+Problem 4 is solved by member 1 from 41 to 89
+Problem 5 is solved by member 1 from 89 to 148
+
+Case 107
+Average solution time = 44.33
+Problem 1 is solved by member 1 from 35 to 60
+Problem 2 is solved by member 1 from 3 to 12
+Problem 3 is solved by member 1 from 12 to 35
+Problem 4 is solved by member 1 from 1 to 3
+Problem 5 is solved by member 1 from 60 to 155
+Problem 6 is solved by member 1 from 0 to 1
+
+Case 108
+Average solution time = 57.90
+Problem 1 is solved by member 2 from 0 to 8
+Problem 2 is solved by member 1 from 81 to 135
+Problem 3 is solved by member 2 from 79 to 144
+Problem 4 is solved by member 1 from 5 to 17
+Problem 5 is solved by member 1 from 0 to 5
+Problem 6 is solved by member 2 from 18 to 79
+Problem 7 is solved by member 1 from 44 to 81
+Problem 8 is solved by member 1 from 17 to 44
+Problem 9 is solved by member 3 from 0 to 48
+Problem 10 is solved by member 2 from 8 to 18
+
+Case 109
+Average solution time = 78.33
+Problem 1 is solved by member 3 from 0 to 81
+Problem 2 is solved by member 1 from 0 to 45
+Problem 3 is solved by member 1 from 45 to 109
+
+Case 110
+Average solution time = 81.00
+Problem 1 is solved by member 2 from 0 to 81
+
+Case 111
+Average solution time = 53.11
+Problem 1 is solved by member 1 from 0 to 14
+Problem 2 is solved by member 1 from 14 to 56
+Problem 3 is solved by member 2 from 0 to 3
+Problem 4 is solved by member 3 from 41 to 110
+Problem 5 is solved by member 3 from 0 to 8
+Problem 6 is solved by member 2 from 3 to 38
+Problem 7 is solved by member 1 from 56 to 109
+Problem 8 is solved by member 3 from 8 to 41
+Problem 9 is solved by member 2 from 38 to 99
+
+Case 112
+Average solution time = 209.44
+Problem 1 is solved by member 1 from 247 to 332
+Problem 2 is solved by member 1 from 0 to 9
+Problem 3 is solved by member 1 from 28 to 65
+Problem 4 is solved by member 1 from 419 to 515
+Problem 5 is solved by member 1 from 104 to 166
+Problem 6 is solved by member 1 from 166 to 247
+Problem 7 is solved by member 1 from 332 to 419
+Problem 8 is solved by member 1 from 9 to 28
+Problem 9 is solved by member 1 from 65 to 104
+
+Case 113
+Average solution time = 85.20
+Problem 1 is solved by member 1 from 128 to 193
+Problem 2 is solved by member 1 from 74 to 128
+Problem 3 is solved by member 1 from 28 to 74
+Problem 4 is solved by member 1 from 0 to 3
+Problem 5 is solved by member 1 from 3 to 28
+
+Case 114
+Average solution time = 146.00
+Problem 1 is solved by member 2 from 142 to 232
+Problem 2 is solved by member 2 from 64 to 142
+Problem 3 is solved by member 2 from 0 to 64
+
+Case 115
+Average solution time = 26.00
+Problem 1 is solved by member 1 from 0 to 26
+
+Case 116
+Average solution time = 60.00
+Problem 1 is solved by member 1 from 0 to 14
+Problem 2 is solved by member 1 from 14 to 105
+Problem 3 is solved by member 2 from 18 to 103
+Problem 4 is solved by member 2 from 0 to 18
+
+Case 117
+Average solution time = 71.71
+Problem 1 is solved by member 2 from 45 to 83
+Problem 2 is solved by member 2 from 15 to 45
+Problem 3 is solved by member 2 from 0 to 15
+Problem 4 is solved by member 1 from 53 to 102
+Problem 5 is solved by member 1 from 23 to 53
+Problem 6 is solved by member 2 from 83 to 181
+Problem 7 is solved by member 1 from 0 to 23
+
+Case 118
+Average solution time = 52.00
+Problem 1 is solved by member 1 from 0 to 52
+

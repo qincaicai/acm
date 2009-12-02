@@ -1,0 +1,38 @@
+PROGRAM TEST007;
+CONST
+  A = 999999;
+  B = 9999;
+  C = 99;
+  D = 9;
+  OK = 1
+BEGIN
+  PRINT 1;
+  BEGIN
+    PRINT 1+1;
+    BEGIN
+      PRINT 1+1+1;
+      BEGIN
+        PRINT A+B-C;
+        PRINT D;
+        BEGIN
+          BEGIN
+          END;
+          BEGIN
+            PRINT A-B+C;
+            BEGIN
+              BEGIN
+                BEGIN
+                  BEGIN
+                    BEGIN
+                    END
+                  END
+                END
+              END;
+              PRINT OK
+            END
+          END
+        END
+      END
+    END
+  END
+END.

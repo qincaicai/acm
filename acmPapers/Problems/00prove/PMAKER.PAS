@@ -1,0 +1,32 @@
+
+{$R+}
+
+const
+  name      =      'prove.ina';
+  n         =      40;
+
+var
+  s            :      array[1..n] of string;
+  i, j, t1, t2 :      integer;
+
+procedure ger;
+begin
+  for i := 1 to n do s[i] := '(a)';
+  for i := n downto 2 do
+    begin
+      repeat
+        t1 := random(i)+1;
+        t2 := random(i)+1;
+      until t1 <> t2;
+      s[t1] := '(' + s[t1] + s[t2] + ')';
+      for j := t2 to i-1 do s[j] := s[j+1];
+    end;
+  writeln(s[1]);
+end;
+
+begin
+  assign(output, name); rewrite(output);
+  randomize;
+  ger; ger;
+  close(output);
+end.

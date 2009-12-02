@@ -1,0 +1,49 @@
+// Problem   Assistance Required
+// Algorithm Precalculation
+// Runtime   O(n*l[n])
+// Author    Walter Guttmann
+// Date      16.07.2000
+
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+ifstream in ("assist.in");
+
+const int maxl = 33810;
+
+int l[4096];
+bool b[maxl];
+
+int main ()
+{
+  // precalculate all lucky numbers (the 3000th one is 33809) by simulation
+  // this would also suit the "Freiburg Method" for larger values of n
+  for (int i=0 ; i<maxl ; i++)
+    b[i] = true;
+  for (int n=1,start=1 ; n<=3000; n++)
+  {
+    ++start;
+    while (!b[start]) ++start;
+    l[n] = start;
+    for (int m=start ; m<maxl ; )
+    {
+      b[m] = false;
+      for (int i=0 ; i<start ; i++)
+      {
+        ++m;
+        while (m<maxl && !b[m]) ++m;
+      }
+    }
+  }
+  while (1)
+  {
+    int n;
+    in >> n;
+    if (n == 0) break;
+    cout << l[n] << endl;
+  }
+  return 0;
+}
+

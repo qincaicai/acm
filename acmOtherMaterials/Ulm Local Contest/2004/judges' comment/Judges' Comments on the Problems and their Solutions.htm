@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0064)http://www.informatik.uni-ulm.de/acm/Locals/2004/html/judge.html -->
+<HTML><HEAD><TITLE>Judges' Comments on the Problems and their Solutions</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>2004/2005 ACM International Collegiate Programming Contest 
+<BR>University of Ulm Local Contest 
+<P>
+<H1>Judges' Comments on the Problems and their Solutions</H1></CENTER>
+<P>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD>
+      <CENTER>Problem</CENTER></TD>
+    <TD>Name</TD>
+    <TD>
+      <CENTER>Rating</CENTER></TD>
+    <TD>Method</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>A</CENTER></TD>
+    <TD>All Discs Considered</TD>
+    <TD>
+      <CENTER>Easy</CENTER></TD>
+    <TD>Breadth First Search</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>B</CENTER></TD>
+    <TD>Boolean Logic</TD>
+    <TD>
+      <CENTER>Hard</CENTER></TD>
+    <TD>Parsing, Brute Force</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>C</CENTER></TD>
+    <TD>Code</TD>
+    <TD>
+      <CENTER>Medium</CENTER></TD>
+    <TD>Euler Tour, Depth First Search</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>D</CENTER></TD>
+    <TD>In Danger</TD>
+    <TD>
+      <CENTER>Medium</CENTER></TD>
+    <TD>Dynamic Programming<BR>or Precalculation<BR>or ...</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>E</CENTER></TD>
+    <TD>Run Length Encoding</TD>
+    <TD>
+      <CENTER>Easy</CENTER></TD>
+    <TD>Straight-Forward</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>F</CENTER></TD>
+    <TD>Fractran</TD>
+    <TD>
+      <CENTER>Medium</CENTER></TD>
+    <TD>Prime Factorisation, Simulation</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>G</CENTER></TD>
+    <TD>Huffman's Greed</TD>
+    <TD>
+      <CENTER>Medium</CENTER></TD>
+    <TD>Dynamic Programming</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>H</CENTER></TD>
+    <TD>Binary Search Heap Construction</TD>
+    <TD>
+      <CENTER>Hard</CENTER></TD>
+    <TD>Order-Statistic Trees</TD></TR></TBODY></TABLE></CENTER>
+<P><B>Problem A: All Discs Considered</B>
+<P>The key observation is that one starts either with the first DVD or with the 
+second DVD. For both cases, the installation process is simulated. Each 
+simulation proceeds by maintaining two queues to store those packages from both 
+discs that may be installed because all dependent packages have already been 
+dealt with. 
+<P>Judges' test data consists of several large test cases with many packages 
+and/or dependences having different patterns, along with exhaustive small test 
+cases. The total number of test cases is 226. 
+<P><U>Rating: Easy</U> 
+<P><B>Problem B: Boolean Logic</B>
+<P>Parse the input according to the specified grammar. Identify the proposition 
+symbols and their positions. Generate all assignments by backtracking or a 
+brute-force approach. For each assignment, evaluate all subformulas and output 
+the result, correctly formatted. Although this solution is relatively 
+straight-forward, the constructed program is quite complex and long. 
+<P>Judges' test data consists of 33 hand-crafted test cases, the most costly of 
+which contains 13 different propositional symbols. 
+<P><U>Rating: Hard</U> 
+<P><U>Reference</U> 
+<BLOCKQUOTE>Chapter 1.2, p. 19, in: <BR>van Dalen, D. <BR><I>Logic and 
+  Structure</I> <BR>Springer-Verlag, 2nd edition, 3rd printing, 1989 <BR><I>ISBN 
+  0-387-12831-X</I> </BLOCKQUOTE>
+<P><B>Problem C: Code</B>
+<P>Imagine the finite state machine that controls the safe lock. You can view it 
+as a directed graph with <I>10<SUP>n-1</SUP></I> nodes, one for each state. 
+Every node has <I>10</I> outbound edges, one for each possible key press. 
+<P>Every sequence of <I>k</I> key presses, where <I>k&gt;=n-1</I>, entered to 
+the lock corresponds to a path of length <I>k-(n-1)</I> in the directed graph. 
+The first <I>n-1</I> key presses determine the start node, and every following 
+key press adds an edge to the path. 
+<P>A sequence of key presses that contains each <I>n</I>-digit sequence 
+corresponds to a path that traverses every edge of the directed graph at least 
+once. The problem statement asserts the existence of a sequence of length 
+<I>10<SUP>n</SUP>+n-1</I> that corresponds to a path of length 
+<I>10<SUP>n</SUP></I>. This means that there is a path that traverses every edge 
+of the directed graph <I>exactly</I> once. 
+<P>Since every node of the directed graph has the same in-degree as its 
+out-degree (viz. 10) such a path is actually a circle, a so called Euler tour. 
+Indeed, the existence of an Euler tour is granted by virtue of this special 
+structure of the directed graph, too. 
+<P>Therefore, all that has to be done is to find an Euler tour. This can be 
+accomplished by a depth-first traversal in the directed graph. 
+<P>Judges' test data consists of testing the code-lengths <I>1,...,5</I> twice 
+and the maximum code length <I>6</I> once. Since there may be more than one 
+Euler tour, a verification program supports the judging process. 
+<P><U>Rating: Medium</U> 
+<P><U>Reference</U> 
+<BLOCKQUOTE><I>Safebreaker</I> <BR>SWERC 1997, Problem S, posed by an unknown 
+  author </BLOCKQUOTE>
+<P><B>Problem D: In Danger</B>
+<P>The value of <I>n</I> can be as large as 99000000. Thus simulating the "game" 
+for every test case is too slow. There are several possibilities to overcome 
+this problem: 
+<P>Observe that there are at most 10*10*7 different test cases, since this is 
+the number of different combinations that are allowed for <I>x,y,z</I>. So you 
+could simulate all these test cases on your own computer, where your time limit 
+is 5 hours. However, you still have to invest quite a bit in coding, if your 
+computer has limited memory (i.e., less than 512 MB). 
+<P>During a simulation, if you remove a person, you have reduced the problem 
+from size <I>n</I> to size <I>n-1</I>. This suggests a dynamic programming 
+solution. Let <I>J(n)</I> be the solution for the problem of size <I>n</I>. The 
+first person who leaves, has number 2. The remaining persons are: <I>3, 4, 5, 
+..., n-1, n, 1</I>. The solution of the similar problem, where the persons have 
+numbers <I>1, 2, ..., n-1</I> is <I>J(n-1)</I>. The transformation is 
+<I>J(n)=((J(n-1)+1) mod n) + 1</I>. If you do not store the values, this removes 
+at least the memory problems, however the runtime restriction still applies. 
+<P>Now, precalculate the function <I>J</I> once at the beginning of your 
+program. The runtime is no longer a problem, and if you only store the value of 
+<I>J</I> at the possible input values of <I>n</I>, memory is no longer, too. 
+<P>The reduction from size <I>n</I> to size <I>n-1</I> can be generalised to a 
+reduction to size <I>n/2</I>. Observe that the first <I>n/2</I> persons leaving 
+are always those with numbers <I>2, 4, 6, ..., n/2</I>. Then, similar 
+transformations can be found. You have to consider separately the two cases of 
+<I>n</I> being an even or an odd number to complete the reduction: 
+<I>J(2*n)=J(n)*2-1</I> and <I>J(2*n+1)=J(n)*2+1</I>. With these formulas you 
+have reduced the runtime to <I>O(log n)</I>. 
+<P>You can further try to calculate several values of <I>J</I> manually (or 
+write any inefficient program), to get an intuition of the function. The first 
+values are: <I>1, 1, 3, 1, 3, 5, 7, 1, 3, 5, 7, 9, 11, 13, 15, 1</I>. You may 
+notice that <I>J(n)</I> is always odd and starts anew from 1 with every power of 
+2. It increases through all successive odd numbers until it is about to reach 
+the next power of 2 when it again drops to 1. Let <I>k</I> be the largest 
+integer with <I>2<SUP>k</SUP>&lt;=n</I>. Now, it is not difficult to set up a 
+closed formula for this sequence of numbers: <I>J(2<SUP>k</SUP>+t)=2*t+1</I>. 
+The correctness of this formula is easily proved by induction with the help of 
+the recursive formulas. Actually, there are means to solve the recursion 
+equations explicitly. By the way, looking at the closed formula, note that in 
+binary notation, <I>J(n)</I> is <I>n</I> rotated 1 bit to the left. 
+<P>Judges' test data consists of all 693 different test cases. 
+<P><U>Rating: Medium</U> 
+<P><U>Reference</U> 
+<BLOCKQUOTE>Chapter 1.3, p. 8, in: <BR>Graham, R.L. ; Knuth, D.E. ; Patashnik, 
+  O. <BR><I>Concrete Mathematics</I> <BR>Addison-Wesley, 2nd edition, 1994 
+  <BR><I>ISBN 0-201-55802-5</I> </BLOCKQUOTE>
+<P><B>Problem E: Run Length Encoding</B>
+<P>The input file is processed line by line. Every line is processed by a loop 
+that checks if a sequence of consecutive repetitions starts at the current 
+position. If this is the case, the length of the repetition is calculated up to 
+a maximal length of 9 characters, and its encoding is output. Otherwise, the 
+next sequence of consecutive repetitions, if any, is located and the 
+intermediate characters are encoded and output. This procedure is continued 
+until the end of the line is reached. 
+<P>Judges' test data consists of several hand-crafted and several randomly 
+generated lines. Altogether, the input file contains 225 lines with at most 100 
+characters each. 
+<P><U>Rating: Easy</U> 
+<P><U>Reference</U> 
+<BLOCKQUOTE><I>Run Length Encoding</I> <BR>Problem C from an unknown 
+  preliminary contest, posed by an unknown author </BLOCKQUOTE>
+<P><B>Problem F: Fractran</B>
+<P>It is not difficult to code the simulation using arbitrary-precision 
+integers, but the numbers can get pretty large and the operations then take too 
+much time. Every integer number, however, has a unique representation through 
+its prime factorisation. The necessary operations to perform the simulation are 
+then easily implemented. For example, multiplication and division boil down to 
+addition and subtraction of corresponding exponents. The Sieve of Eratosthenes 
+can be used to calculate the prime numbers. 
+<P>All the prime numbers that will have to be handled in a simulation must be 
+prime factors of numbers given in the input. Since theses numbers are bounded by 
+1000 just prime factors less than 1000 will occur, and there are 168 of them. It 
+follows also that a number occurring in one of the fractions can have at most 4 
+different prime factors, whereas the current state of the computation may have 
+many more. It is, therefore, efficient to store the current state of the 
+computation as an array of integers denoting the exponents corresponding to all 
+prime factors less than 1000, and numerators and denominators as lists 
+containing only the occurring prime factors. Testing if the current state is a 
+power of 2 is efficiently performed by additionally caching the total number of 
+primes in its factorisation. 
+<P>Judges' test data consists of 12 hand-crafted test cases. 
+<P><U>Rating: Medium</U> 
+<P><U>Reference</U> 
+<BLOCKQUOTE>Conway, J.H. <BR><I>Fractran: A simple universal programming 
+  language for arithmetic</I> <BR>Chapter 2, in: <BR>Cover, T.M. ; Gopinath, B. 
+  <BR><I>Open problems in communication and computation</I> <BR>Springer-Verlag, 
+  1987 <BR><I>ISBN 0-387-96621-8</I> </BLOCKQUOTE>
+<P><B>Problem G: Huffman's Greed</B>
+<P>Due to the lexicographic ordering, any sub-tree must contain a continuous 
+sequence of labels <I>K<SUB>i</SUB>,K<SUB>i+1</SUB>,...,K<SUB>i+d</SUB></I>. The 
+cost of arranging these keys in a tree depends only on the probabilities 
+<I>q<SUB>i</SUB>,p<SUB>i+1</SUB>,q<SUB>i+1</SUB>,...,p<SUB>i+d</SUB>,q<SUB>i+d</SUB></I>. 
+This calls for a dynamic programming approach where each of the labels 
+<I>K<SUB>i</SUB>,...,K<SUB>i+d</SUB></I> is tried as the root of the tree. If, 
+e.g., <I>K<SUB>k</SUB></I> is the root, the labels 
+<I>K<SUB>i</SUB>,...,K<SUB>k-1</SUB></I> must be placed into the left sub-tree, 
+and the labels <I>K<SUB>k+1</SUB>,...,K<SUB>i+d</SUB></I> must go into the right 
+sub-tree. The arising sub-problems are, by dynamic programming, already solved. 
+The cost of arranging the labels in a tree is calculated from the costs of the 
+sub-trees plus a certain constant amount (since the levels of the nodes in the 
+sub-trees increase by 1, and the root is added). 
+<P>This approach leads to a runtime of <I>O(n<SUP>3</SUP>)</I>, fast enough for 
+<I>n&lt;=200</I>. See the reference for an improvement to 
+<I>O(n<SUP>2</SUP>)</I>. 
+<P>Judges' test data consists of 27 hand-crafted test cases and 100 randomly 
+generated test cases. 
+<P><U>Rating: Medium</U> 
+<P><U>Reference</U> 
+<BLOCKQUOTE>Chapter 6.2.2, pp. 436-442 in: <BR>Knuth, D.E. <BR><I>The Art of 
+  Computer Programming, Volume 3: Sorting and Searching</I> <BR>Addison-Wesley, 
+  2nd edition, 1998 <BR><I>ISBN 0-201-89685-0</I> </BLOCKQUOTE>
+<P><B>Problem H: Binary Search Heap Construction</B>
+<P>Since the labels and the priorities are unique, there is exactly one treap 
+for every test case. It is constructed in a straight-forward way as follows. 
+Find the node with the greatest priority, which will become the root of the 
+treap. Split the remaining nodes into two sets: those with labels less than that 
+of the root and those with labels greater than that of the root. From the 
+first/second set of nodes construct the left/right sub-treap by applying this 
+strategy recursively. If the set of nodes is empty, we have reached a leaf, and 
+the recursion terminates. 
+<P>In a straight-forward implementation using lists we need linear time to find 
+the maximum priority node and linear time to split the set of nodes, too. 
+Therefore, in the worst case, we get a runtime of <I>O(n<SUP>2</SUP>)</I>, too 
+slow for values of <I>n</I> up to <I>50000</I>. Compare this, e.g., to the worst 
+case of the quicksort algorithm. 
+<P>We may, however, reduce the amount of time needed to split the set of nodes 
+by sorting them (using an <I>O(n*log(n))</I> complexity algorithm) according to 
+their labels in the beginning. Then, the kind of subset of nodes needed for our 
+procedure is represented by an interval indicating the smallest and the greatest 
+element. In each recursive step, an interval is split into two sub-intervals. 
+Still, we need linear time to find the maximum priority in such an interval, 
+leaving us with a quadratic worst-case-time. 
+<P>We can find the maximum priority in logarithmic time by augmenting the list 
+of elements with an order-statistic tree. To this end, we build a complete 
+binary tree large enough to hold <I>n</I> numbers (the priorities) at its bottom 
+level. Every internal node is marked with the maximum of the priorities below 
+that node. Such a tree can be constructed in linear time in a bottom-up fashion. 
+With this additional information, we no longer need to scan through a complete 
+interval in search of the maximum priority but can use the combined maximum 
+numbers stored in the internal nodes. Thus, we are able to find the maximum 
+priority in logarithmic time by a bottom-up search in the order-statistic tree 
+from both ends of the interval. We then add a top-down search to find the 
+element of the interval having that priority. Hence, the total runtime of our 
+algorithm is <I>O(n*log(n))</I>. 
+<P>Judges' test data consists of 14 hand-crafted test cases, 50 randomly 
+generated test cases, and 3 large test cases (one of which is randomly 
+generated). 
+<P><U>Rating: Hard</U> 
+<P><U>Reference</U> 
+<BLOCKQUOTE><I>Treaps</I> <BR>Problem F from an unknown preliminary contest, 
+  posed by an unknown author </BLOCKQUOTE></BODY></HTML>

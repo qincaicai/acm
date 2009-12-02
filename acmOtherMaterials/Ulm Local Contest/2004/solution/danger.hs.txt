@@ -1,0 +1,16 @@
+-- Problem   In Danger
+-- Algorithm Recursion
+-- Runtime   O(log(n))
+-- Author    Walter Guttmann
+-- Date      06.05.2001
+
+main :: IO ()
+main =
+  do input <- readFile "danger.in"
+     mapM_ (print . solve) $ takeWhile (> 0) $ map (round . read) $ words input
+
+solve :: Int -> Int
+solve n | n == 1         = 1
+        | n `mod` 2 == 1 = solve ((n-1) `div` 2) * 2 + 1
+        | otherwise      = solve (n `div` 2) * 2 - 1
+

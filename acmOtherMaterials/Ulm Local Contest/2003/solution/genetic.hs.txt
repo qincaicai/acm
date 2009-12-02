@@ -1,0 +1,18 @@
+-- Problem   Genetic Code
+-- Algorithm Constructive
+-- Runtime   O(n)
+-- Author    Walter Guttmann
+-- Date      12.03.2003
+
+main :: IO ()
+main =
+  do input <- readFile "genetic.in"
+     mapM_ (putStrLn . flip take thue) $ takeWhile (>0) $ map read $ words input
+
+thue :: String
+thue = head $ dropWhile tooShort $ iterate (concat . map replace) "N"
+  where tooShort xs = length xs < 5000
+        replace 'N' = "OP"
+        replace 'O' = "ONP"
+        replace 'P' = "N"
+

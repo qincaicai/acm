@@ -1,0 +1,341 @@
+
+
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <head>
+    <title>CS 762 (Graph-Theoretic Algorithms), Winter 2002: Assignment</title>
+    <link rel=StyleSheet href="../style.css" type="text/css">
+    </head>
+
+    <body bgcolor="white">
+
+    <TABLE WIDTH="100%">
+    <TR> <td>&nbsp
+    <TR>
+    <TD ALIGN="CENTER"><H2>CS 762 (Graph-Theoretic Algorithms) <br> Winter 2002 <br>
+	Assignment </H2>
+    <TD><IMG SRC="http://www.uwaterloo.ca/images/UWlogo.GIF" ALT="UW Logo" HEIGHT=69 ALIGN=RIGHT BORDER=0>
+
+    </TR>
+    </TABLE>
+
+  <P>
+        <TABLE BORDER=2 WIDTH="100%"><TR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../index.php">Home</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Outline/index.php">Outline</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Resources/index.php">Resources</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Schedule/index.php">Schedule</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Summaries/index.php">Summaries</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Grades/index.php">Grades</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><SPAN CLASS="current">Assignments</SPAN><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Projects/index.php">Projects</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Notes/index.php">Notes</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Open/index.php">Open</A><BR>
+</TABLE><P>Skip to the <A href="#rules">Assignment rules</A>.<hr> <b> Week 1</b> <hr> <p> <UL><LI> Monday, January 07, 2002 (Lecture 1)<br>Show that finding a maximum independent set on a tree can be done in
+linear time. <br>
+<b>Solution-hint</b>: Use a post-order traversal, and add each vertex unless
+one of its children has already been taken.
+<P><LI> Wednesday, January 09, 2002 (Lecture 2)<br>
+Given an interval graph G.  Show that G can be represented with
+intervals whose endpoints are exactly {1,2,...,2n}, with none of
+these points used twice. <br>
+<b>Solution-hint</b>:  Take some interval representation of G. Sort the endpoints 
+in increasing order, and break ties in order ),[,],(.
+<P><LI> Friday, January 11, 2002 (Lecture 3)<br>
+Show that NAE-3-SAT reduces to Maximum Cut. (You can find the definition
+of Maximum Cut in the lecture notes for Jan. 7.) <br>
+<b>Solution-hint</b>:  Take the same construction as in class for 3-coloring,
+except omit the central vertex.  Show that NAE-3-SAT has a solution if
+and only if this graph has a cut of size 5m+n.
+<P></UL><hr> <b> Week 2</b> <hr> <p> <UL><LI> Monday, January 14, 2002 (Lecture 4)<br>
+Given a graph G with a perfect elimination order {v1, v2, ..., vn}.
+Show that if we apply the greedy-algorithm for independent set
+using the <i>reverse</i> order (i.e., starting with vn and ending
+with v1), then we obtain a maximum independent set.   <br>
+<b>Solution-hint</b>: For each vertex i that we add to the independent
+set, let Yi be i plus its predecessors.  Show that these sets Yi
+together are a clique cover of the same size as the independent set,
+so both have optimal size.
+<P><LI> Wednesday, January 16, 2002 (Lecture 5)<br>If G is a chordal graph, then we can find a perfect elimination order
+either with MCS or lexBFS.
+However, there are perfect elimination orders that are neither.
+To prove this,
+give a chordal graph G with a perfect elimination order that is not
+obtained with MCS (regardless of how ties are broken), and not obtained
+with lexBFS (regardless of how ties are broken). <br>
+<b>Solution-hint</b>: Let G be a 3-cycle {a,b,c} with one extra edge (c,d).  
+Then a,c,d,b is a p.e.o., but it isn't a BFS (so lexBFS doesn't get
+it), and MCS would have taken b before d.
+<P><LI> Friday, January 18, 2002 (Lecture 6)<br>We say that a vertex order v1,...,vn is a MinDegOrder if for
+any i, vertex vi is a vertex of minimum degree in the graph induced
+by vi,...,vn.  
+Show how to find a MinDegOrder in O(m+n) time.  <br>
+<b>Solution-hint</b>: Use a list-of-buckets structure, where each bucket
+contains the vertices of the same degree, and the structure is
+sorted by degree.  Initialize this with bucketsort by the degree
+(O(m+n)).  Removing a vertex v involved deg(v)+1 updates, each of
+which can be done in constant time since each neighbors of v moves
+to an adjacent bucket.<P></UL><hr> <b> Week 3</b> <hr> <p> <UL><LI> Monday, January 21, 2002 (Lecture 7)<br>Show that every chordal graph G can be represented in the following
+way:  There exists a tree T and n subtrees T1,...,Tn such that
+<UL>
+<LI> (i,j) is an edge in G if and only if Ti and Tj have an edge 
+	in common,
+<LI> for every i, tree Ti contains an edge that is not in any
+	other tree among T1,...,Tn.
+</UL> 
+<b>Solution-hint</b>: Take the tree-representation that we had in
+class.  For every edge (i,j) in G, extend both Ti and Tj by one
+edge from a node that is common to both.
+For every vertex i in G, extend Ti by one new edge somewhere.<P><LI> Wednesday, January 23, 2002 (Lecture 8)<br>Let G be a poset.  Show that G has dimension &lt;=2 if and only if the
+complement of G is a comparability graph.<br>
+<b>Solution-hint</b>.  If G has dimension 1, then it is complete and
+its complement has no edges and is a comparability graph.  If G has 
+dimension 2, then let L1 and L2 be the two topological orders; one
+verifies easily that L1 and L2<sup>-1</sup> define exactly the edges
+of the complement of G, which therefore is a comparability graph.  <br>
+For the other direction, let P and F be transitive acyclic orientations
+of G and its complement.  One can show that PuF has a topological order, 
+for example by showing that the first layer of P and the first layer of 
+F intersect in at least one vertex, so PuF has a source, and by induction 
+we can get the topological order.  Let this be L1, and let L2 be a topological
+order that similarly we get out of PuF<sup>-1</sup>.  One can show that
+this defines exactly P, so P has dimension 2.<P><LI> Friday, January 25, 2002 (Lecture 9)<br>How big can the number of maximal cliques be in a comparability
+graph?  Linear?  Quadratic?  Exponential? <br>
+<b>Solution-hint:</b> It can be exponential.  Consider K(2,2,...,2),
+i.e., the complete n/2-partite graph (which is a comparability graph).  
+It has 2<sup>n/2</sup> maximal cliques (of size n/2).<P></UL><hr> <b> Week 4</b> <hr> <p> <UL><LI> Monday, January 28, 2002 (Lecture 10)<br>Find a graph G that is perfect, but it isn't a chordal graph or a
+comparability graph, and its complement also isn't chordal or a 
+comparability graph. <br>
+<b>Solution-hint:</b> Congrats to Henning for the smallest solution
+I've seen.
+Take a 7-cycle a-b-...-f-g-a, and add edges (a,d) and (a,e).  One
+can verify all conditions.<P><LI> Wednesday, January 30, 2002 (Lecture 11)<br>Show that a graph G is a permutation graph if and only if both G and its
+complement are comparability graphs.<br>
+<b>Solution-hint:</b> Assume G is defined by the orders 1...n and pi(1)...pi(n).
+Interpreting these as complete orders, their intersection is a poset on the 
+complement of G, and the intersection of n...1 and pi(1)...pi(n) is a poset on
+G.  For the reverse direction, by Ass. 8 some poset of G has dimension 2; taking
+its two orders and reversing one gives the permutation for G.<P><LI> Friday, February 01, 2002 (Lecture 12)<br>Show that every line graph is a 2-interval graph, but the reverse does
+not hold.<br>
+<b>Solution-hint:</b> Let H be the line graph of G.  For every vertex
+in G, define an interval Iv.  For every vertex in H, which is an edge
+(v,w) in G, let the vertex be represented by the union of Iv and Iw.
+This is a 2-interval graph representation of H.  For the reverse, note
+that K<sub>1,3</sub> is an interval graph (hence a 2-interval graph),
+but not a line graph.<P></UL><hr> <b> Week 5</b> <hr> <p> <UL><LI> Monday, February 04, 2002 (Lecture 13)<br>Show that if G is a k-tree, then G has treewidth &lt;= k. <br>
+<b>Solution-hint:</b> 
+Take a p.e.o. of G and build a tree decomposition from it.  
+The first k+1 vertices build one node of
+the tree decomposition.  For each following vertex v, the predecessors
+form a clique, and therefore (by the next homework) are in one of
+the nodes that we already built.  Build a new node containing v and
+its predecessors, and connect it to the node that contains the
+predecessors.  Verify the condition.
+<P><LI> Wednesday, February 06, 2002 (Lecture 14)<br>Let G be a graph and let C be a clique in G.  Show that in any
+tree decomposition (I,F) of G, there exists some node i in I such
+that C is a subset of X<sub>i</sub>.<br>
+<b>Solution-hint:</b> For every vertex v in C, let Tv be the subtree
+consisting of all nodes in I that contain v in their label.  Since we
+have a tree decomposition, Tv is connected and indeed a subtree.  For
+any two vertex v,w in the clique, there is an edge between them and
+so their trees Tv and Tw intersect.  By the Helly-property, therefore
+all trees of all vertices in the clique intersect in one node, and
+that's the one we want.<P><LI> Friday, February 08, 2002 (Lecture 15)<br>Show that if G is a k-tree, then any perfect elimination order of
+G satisfies indeg(vi)=k for all i>k. <br>
+<b>Solution-hint</b>: By previous homeworks, we know that G has no
+clique of size k+2, so indeg(vi)<= k.  We must have equality for
+i>k, for otherwise we couldn't have enough edges.
+<P></UL><hr> <b> Week 6</b> <hr> <p> <UL><LI> Monday, February 11, 2002 (Lecture 16)<br>Show that G has treewidth &lt;= k if and only if all biconnected
+components of G have treewidth &lt= k. <br>
+<b>Solution-hint</b>.  To obtain a tree decomposition of a biconnected
+component C from one of G, just delete all vertices that weren't in C
+and verify the properties.  For the other direction, just `paste' the
+tree decomposition of each biconnected component into the blocktree,
+and connect the node of each cutvertex with one of the nodes of the
+tree decomposition that contains the cutvertex.<P><LI> Wednesday, February 13, 2002 (Lecture 17)<br>Show that every <font color="red">simple triangle-free</font>
+2-terminal SP-graph has boxicity &lt;= 2 (i.e.,
+it can be represented as intersection graph of axis-aligned
+2-dimensional rectangles). <br>
+<b>Solution-hint</b>:  This was the one that turned out to be way
+more complicated than I had thought.  The result is true, but the
+needed invariant quite complicated.  Assume we have an (s,t)-SP graph.
+If edge (s,t) exists, then draw it such that s and t are on opposite
+corners (intersecting in the center).  If s and t have a common neighbour,
+draw them so that they are spanning the top and bottom.  [Note that not
+both cases can happen, since that would be a triangle.]  If neither
+case happens, draw s and t on opposite corners with space in the center.
+Verify in all cases (there are only 21 or so...) that you can create
+such drawings.<P><LI> Friday, February 15, 2002 (Lecture 18)<br>Let G be a 2-terminal SP-graph, let s,t be two
+vertices.  Show that G is an (s,t)-SP-graph if and only
+if the graph that results from adding edge (s,t) to G is a
+<font color="red">biconnected</font> 2-terminal-SP-graph.<br>
+<b>Solution-hint</b>:  For one direction, show by induction that in
+any (s,t)-SP graph, for any vertex v there exists paths s--v and v--t
+that are disjoint.  Then adding edge (s,t) must make the graph biconnected.
+For the other direction, study the proof that every biconnected partial
+2-tree is a 2-terminal SP-graph.  In this proof, we had the choice of
+making the endpoints of any edge into the terminals, hence the claim holds.
+<P></UL><hr> <b> Week 7</b> <hr> <p> <UL><LI> Monday, February 18, 2002 (Lecture 19)<br>The (a,b)-grid graph consists of vertices at (i,j) for i=1,...,a
+and j=1,...,b and edges between any two vertices of distance 1.
+Show that an (a,b)-grid graph has a weighted 2/3-separator of
+size at most min{a,b}.<br>
+<b>Solution-hint</b>:  Assume the grid has no more columns than rows.
+Contract every row into one big vertex (whose weight is the total
+weight of the row.)  This gives a path, which has a weighted
+2/3-separator of size 1.  The min{a,b} vertices that were contracted
+into this separator are a 2/3-separator of the (a,b)-grid.<P><LI> Wednesday, February 20, 2002 (Lecture 20)<br>What is the pathwidth of an (a,b)-grid graph?  Give the best bound
+that you can find.  (You need not prove that this is the best possible
+bound, but no credit will be given if yours is not the best bound.) <br>
+<b>Solution-hint</b>:  The answer is min{a,b}.  To see this, assume
+that we have no more columns than rows, and enumerate the vertices
+row-by-row as 1,2,3,...,a*b.  One can verify that for any edge (i,j)
+we have |i-j|&lt;=min{a,b}; hence the graph has bandwidth &lt;=min{a,b},
+and therefore also pathwidth &lt;=min{a,b}.
+<P><LI> Friday, February 22, 2002: No lecture (Study break)<P></UL><hr> <b> Week 8</b> <hr> <p> <UL><LI> Monday, February 25, 2002: No lecture <P><LI> Wednesday, February 27, 2002: No lecture <P><LI> Friday, March 01, 2002 (Lecture 21)<br>No homework.<P></UL><hr> <b> Week 9</b> <hr> <p> <UL><LI> Monday, March 04, 2002 (Lecture 22)<br>Show that every planar simple graph can be made simple and triangulated 
+by adding O(n) vertices and edges such that all new edges have at least
+one new vertex as an endpoint.  Your algorithm should take linear time.<br>
+<b>Solution-hint</b>:  The naive approach is to add one vertex into every
+face and connect it to all other vertices on the face.  This works if the
+graph is biconnected, but creates multiple edges otherwise.  So first make
+the graph biconnected, by adding a new vertex
+for every two consecutive biconnected components at a cutvertex v
+and making it incident to two neighbours of v in the two biconnected
+components.<P><LI> Wednesday, March 06, 2002: No lecture <P><LI> Friday, March 08, 2002: No lecture <P></UL><hr> <b> Week 10</b> <hr> <p> <UL><LI> Monday, March 11, 2002 (Lecture 23)<br>Give an algorithm that finds all 3-cycles of a graph G in O(a(G)m)
+time. <br>
+<b>Solution-hint</b>: Sort vertices by decreasing degree.  For each
+vertex v, mark all its neighbours, and then for each neighbour u search
+for marked neighbours.  Then delete v.  The search time is 
+proportional to deg(u) = min{deg(u),deg(v)} for each edge (u,v),
+which sums up to 2a(G)m.
+<P><LI> Wednesday, March 13, 2002 (Lecture 24)<br>We showed in class how to create a visibility representation.  If
+all edges have to be placed at lines with integer coordinates, what
+is the width of the resulting drawing? <br>
+<b>Solution-hint</b>: It is at most 2n-4 (counting width = number of
+columns with integer coordinates).  We must modify the invariant such
+that at each step, each vertex on the outer-face has at least one
+column free towards infinity.  In the base, we need a width of 4 =2n-2
+for 3 vertices.  Each added vertex adds two new columns.  At the last vertex
+we can destroy the invariant and therefore don't have to add columns, so
+the total is 2(n-1)-2 =2n-4.
+<P><LI> Friday, March 15, 2002 (Lecture 25)<br>Let G be a graph, and let G' be obtained from G by subdividing
+one edge twice.  Show that alpha(G') = alpha(G)+1.<br>
+<b>Solution-hint</b>: To any independent set in G, we can add
+one of the subdivider vertices to get an independent set 
+in G'.  Conversely, for any independent set in G', we can remove
+at most one vertex (a few cases here...) to get an independent set in G. 
+<P></UL><hr> <b> Week 11</b> <hr> <p> <UL><LI> Monday, March 18, 2002 (Lecture 26)<br>Show that every outer-planar graph has a weighted 2/3-separator of
+size 2.  Also show that `2/3' is the best we can do; in
+particular there are outer-planar graphs that do not have a weighted
+1/2-separator of size 2.<br>
+<b>Solution-hint:</b> Make the graph maximal outer-planar by adding
+edges.  Take an interior face, and try to take the endpoints of one of
+its edges.  The only case when this doesn't work is if the subgraph
+defined by one of those edges has weight > 2/3.  If this happens, take
+the other face incident to this edge and iterate.  The subgraph with
+weight > 2/3 gets smaller and smaller in this process, and since we
+have a finite number of vertices, we must stop at some point.  <br>
+For the counter-example, take a 9-cycle with a triangle between the
+first, fourth and seventh vertex.  The vertices on the triangle have
+weight 0, whereas the other vertices have weight 1/6.
+<P><LI> Wednesday, March 20, 2002 (Lecture 27)<br>Let G be a graph with maximum degree 3, and let T be a spanning
+tree of G with load l.  Show that G has treewidth at most 3l+1. 
+(Actually, 3l/2+1 is feasible. <br>
+<b>Solution-hint:</b> Root T arbitrarily, and for each node in T,
+add the label of of the node itself and its parent.  Now for each
+non-tree edge, take one of the endpoints and add it to all labels
+along the path from one endpoint to the other in T.  It's easy
+to see that this is a tree decomposition and that it has treewidth
+at most 3l+1.  To see 3/2l+1, note that every non-tree edge actually
+uses two incident edges of the interior nodes along its path, so for
+each node we only add at most 3/2l labels of non-tree edges.
+<P><LI> Friday, March 22, 2002 (Lecture 28)<br>No homework<P></UL><hr> <b> Week 12</b> <hr> <p> <UL><LI> Monday, March 25, 2002 (Lecture 29)<br>No homework<P><LI> Wednesday, March 27, 2002 (Lecture 30)<br>No homework<P><LI> Friday, March 29, 2002: No lecture (Good Friday)<P></UL><hr> <b> Week 13</b> <hr> <p> <UL><LI> Monday, April 01, 2002 (Lecture 31)<br>No homework<P></UL>
+<A name="rules"></A>
+<H2> Rules </H2>
+
+Assignments for this class will be very unusual, in that there will be
+lots of short assignments, cheating is allowed, only oral solutions are
+accepted, and all assignments are optional.  Read below for details.
+<UL>
+<LI> All assignments are optional.  
+	<UL>
+	<LI> Doing the assignment successfully
+	will reduce the weight of the final oral exam for your grade.
+	<LI> Not doing the assignment, or giving a wrong/incomplete solution
+	means that your oral exam counts more.   
+	<LI>Even if you don't
+	do a single assignment correct, you can still get full credit.
+	</UL>
+<P>
+<LI> The following rules apply for how to get credit:
+	<UL>
+	<LI> For all except the last few classes, there will be one
+		assignment per class.  Check this web page regularly.
+	<LI> Every assignment is worth 1% of your grade.
+	<LI> You can use any resource you'd like.  Talk to your friends,
+		read textbooks, search the web... everything is allowed.
+		(Out of fairness towards the resource, you should
+		acknowledge help that you received.)
+	<LI> No written solutions will be accepted.  (Neither will
+		solutions sent in by email.)
+	<LI> To present a solution to me, either see me during office
+		hours or make an appointment with me by email.  
+	<LI> You can (and probably should) bring notes to the appointment.
+	<LI> You have to present the solution to me, on the whiteboard
+		in my office.  You should be able to present the solution
+		with only an occasional glance at your notes.  Reading out
+		your notes, and trying to understand them at the same time,
+		is not going to give you credit.
+	<LI> Only one person can present at a time.  (So while you may
+		work in groups for the assignment, you must
+		present them individually.)
+	<LI> Assignments are due within two weeks of when they have been
+		posted.  (I must have received your email requesting an
+		appointment within two weeks; the appointment may actually
+		be slightly later than that.)  
+	</UL>
+<P>
+<LI> To make an appointment:
+	<UL>
+	<LI> Please send me email (<A mailto="biedl@uwaterloo.ca">
+		biedl@uwaterloo.ca</A>).  Ideally, send it at least one				day before you want to see me.
+	<LI> Please specify what range of time would be possible for you.
+		Note that I can definitely <b>not</b> make the following
+		times: <br>
+		<UL>
+		<LI> Monday, Wednesday, Friday before 3pm.
+		<LI> Tuesday before 1pm or after 6pm.
+		<LI> Thursday after 6pm.
+		<LI> Whenever there is a APS problem session, BIPS problem
+			session, Department meeting, or recruiting talk.
+		</UL>
+	<LI> Also, please specify which questions you'd like to answer
+		and how long you think this will take.
+	<LI> I will return your email as soon as possible, telling you
+		when to come in. 
+	</UL>
+<P>
+<LI> As for what credit will be given:
+	<UL>
+	<LI> Every question that was answered
+		correctly means that your final oral exam counts 1%
+		less.
+	<LI> No partial credit will be given.  Either you get it, or you
+		don't.  (However, you do have the chance to think things
+		over while you're with me.)
+	<LI> You only have one shot.  If you've come in and presented a
+		solution, and it wasn't right/complete, you will not be given
+		credit for this assignment.  (Remember, you can always
+		get the credit during the final oral exam.)
+	</UL>
+</UL>
+</DIV>
+	<P>
+	<HR>
+	<SPAN CLASS="footnote">Webmaster:
+	<A HREF="mailto: cs762@student.math.uwaterloo.ca "> cs762@student.math.uwaterloo.ca </A></SPAN><BR><SPAN CLASS="footnote">Last modified: 03/08/2002</SPAN>
+  </TD>
+  </TABLE>
+
+  </BODY>
+  </HTML>
+  

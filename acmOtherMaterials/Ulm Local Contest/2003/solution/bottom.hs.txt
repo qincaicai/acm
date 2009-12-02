@@ -1,0 +1,74 @@
+-- Problem   The Bottom of a Graph
+-- Algorithm Strongly Connected Components, Topological Sort, DFS
+-- Runtime   O(|V|+|E|)
+-- Author    Walter Guttmann
+-- Date      26.04.2003
+
+import IOExts;
+import List;
+import Monad;
+
+main :: IO ()
+main =
+  do input <- readFile "bottom.in"
+     mapM_ solve =<< (cases $ map read $ words input)
+
+type Graph = IOArray Int [Int]
+type BoolA = IOArray Int Bool
+type IntA = IOArray Int Int
+type Case = (Int,[(Int,Int)],Graph,Graph)
+
+cases :: [Int] -> IO [Case]
+cases (0:_) = return []
+cases (v:e:xs) =
+  do graph <- newIOArray (1,v) []
+     mapM (insert_edge graph) edges
+     -- compute the transposed graph
+     transposed <- newIOArray (1,v) []
+     mapM (insert_edge transposed) [ (to,from) | (from,to) <- edges ]
+     -- and the rest, recursively
+     egts <- cases rest
+     return ((v,edges,graph,transposed):egts)
+  where (vps,rest) = splitAt (2*e) xs
+        edges = pairs vps
+        pairs (from:to:vs) = (from,to) : pairs vs
+        pairs []           = []
+        insert_edge graph (from,to) =
+          do adj <- readIOArray graph from
+             writeIOArray graph from (to:adj)
+
+solve :: Case -> IO ()
+solve (v,edges,graph,transposed) =
+  do used <- newIOArray (1,v) False
+     topsort <- foldM (dfs_topsort graph used) [] [1..v]
+     used <- newIOArray (1,v) False
+     scc <- newIOArray (1,v) 0
+     mapM (dfs_scc transposed used scc []) topsort
+     sink <- newIOArray (1,v) True
+     mapM (check_edge scc sink) edges
+     bottom <- filterM ((=<<) (readIOArray sink) . readIOArray scc) [1..v]
+     putStrLn $ concat (intersperse " " (map show bottom))
+
+dfs_topsort :: Graph -> BoolA -> [Int] -> Int -> IO [Int]
+dfs_topsort graph used topsort node =
+  do b <- readIOArray used node
+     if b then return topsort
+          else do writeIOArray used node True
+                  adj <- readIOArray graph node
+                  fmap (node:) $ foldM (dfs_topsort graph used) topsort adj
+
+dfs_scc :: Graph -> BoolA -> IntA -> [Int] -> Int -> IO ()
+dfs_scc graph used scc maybe_component node =
+  do b <- readIOArray used node
+     unless b $ do writeIOArray used node True
+                   writeIOArray scc node component
+                   adj <- readIOArray graph node
+                   mapM_ (dfs_scc graph used scc [component]) adj
+  where component = head (maybe_component ++ [node])
+
+check_edge :: IntA -> BoolA -> (Int,Int) -> IO ()
+check_edge scc sink (from,to) =
+  do from_comp <- readIOArray scc from
+     to_comp <- readIOArray scc to
+     when (from_comp /= to_comp) (writeIOArray sink from_comp False)
+

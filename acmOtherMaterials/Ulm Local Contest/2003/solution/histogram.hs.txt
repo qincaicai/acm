@@ -1,0 +1,32 @@
+-- Problem   Histogram
+-- Algorithm Rewrite-System
+-- Runtime   O(n)
+-- Author    Walter Guttmann
+-- Date      21.06.2003
+
+type I = Integer
+type I2 = (I,I)
+type I2L = [I2]
+
+main :: IO ()
+main =
+  do input <- readFile "histogram.in"
+     mapM_ solve $ cases $ map read $ words input
+
+cases :: [I] -> [[I]]
+cases (0:_) = []
+cases (n:xs) = ys : cases zs
+  where (ys,zs) = splitAt (fromIntegral n) xs
+
+solve :: [I] -> IO ()
+solve hs = print $ snd $ rewrite (([x],y,zs),0)
+  where x:y:zs = [(0,0)] ++ [ (h,1) | h <- hs ] ++ [(0,0)]
+
+rewrite :: ((I2L,I2,I2L),I) -> ((I2L,I2,I2L),I)
+rewrite (((xh,xb):xs,(yh,yb),(zh,zb):zs),m) = m `seq` rewrite (st,max m (yh*yb))
+  where st | xh <  yh && yh <  zh = ((yh,yb):(xh,xb):xs,(zh,zb),zs)
+           | xh <= zh && zh <= yh = ((xh,xb):xs,(min yh zh,yb+zb),zs)
+           | xh >  zh             = (xs,(min xh yh,xb+yb),(zh,zb):zs)
+           | xh == yh && yh <  zh = ((min xh yh,xb+yb):xs,(zh,zb),zs)
+rewrite s = s
+

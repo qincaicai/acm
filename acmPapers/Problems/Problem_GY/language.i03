@@ -1,0 +1,11 @@
+PROGRAM TEST003;
+CONST
+  _1 = 1;
+  ABC = 2
+VAR
+  INTEGER : _v
+BEGIN
+  PRINT _v;
+  PRINT _1;
+  PRINT ABC
+END.

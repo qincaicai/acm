@@ -1,0 +1,15 @@
+PROGRAM TEST005;
+VAR
+  INTEGER : ARRAY A[5]
+BEGIN
+  A[0] := 1;
+  A[A[0]] := 2;
+  A[A[A[0]]] := 4;
+  A[A [A [A[0]] ] * A[0] - 1] := 4;
+  A[4] := A[1] + A[ A[3]*1-1 ] * A[2] - A[A[0]];
+  PRINT A[0];
+  PRINT A[A[0]];
+  PRINT A[2];
+  PRINT A[3];
+  PRINT A[4]
+END.

@@ -1,0 +1,496 @@
+
+
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <head>
+    <title>CS 762 (Graph-Theoretic Algorithms), Winter 2002: Projects</title>
+    <link rel=StyleSheet href="../style.css" type="text/css">
+    </head>
+
+    <body bgcolor="white">
+
+    <TABLE WIDTH="100%">
+    <TR> <td>&nbsp
+    <TR>
+    <TD ALIGN="CENTER"><H2>CS 762 (Graph-Theoretic Algorithms) <br> Winter 2002 <br>
+	Projects </H2>
+    <TD><IMG SRC="http://www.uwaterloo.ca/images/UWlogo.GIF" ALT="UW Logo" HEIGHT=69 ALIGN=RIGHT BORDER=0>
+
+    </TR>
+    </TABLE>
+
+  <P>
+        <TABLE BORDER=2 WIDTH="100%"><TR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../index.php">Home</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Outline/index.php">Outline</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Resources/index.php">Resources</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Schedule/index.php">Schedule</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Summaries/index.php">Summaries</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Grades/index.php">Grades</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Assignments/index.php">Assignments</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><SPAN CLASS="current">Projects</SPAN><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Notes/index.php">Notes</A><BR>
+<TD VALIGN="TOP" ALIGN="CENTER" BGCOLOR="white"><A HREF="../Open/index.php">Open</A><BR>
+</TABLE><P>
+
+Every student must do one project and write a project report about
+it.  In essence, your project consists of preparing one lecture for 
+a course like this, and writing the lecture notes for it.    This
+counts for 30% of your overall grade.
+<p>
+I give some possible topics for projects below 
+(grouped into two types, <A href="#project1">
+exploring a graph class</A> or <A href="#project2">filling in details</A>), 
+but I am open to suggestions from you if you'd like to do something else.
+<p>
+General rules for the projects are <A href="#morerules">below</A>.
+<p>
+
+	
+<A name="project1">
+<H3> Exploring one graph class</H3>
+
+One possible project topic could be to find out as much as possible
+about one graph class (should be one that hasn't been studied, or at
+least not in detail, in class).  In particular, questions that your 
+report could address are:
+<UL>
+<LI> What is the definition of this graph class C?  Give examples of
+	a graph in C, and a graph not in C.
+<LI> How easy is it to test whether a graph is in C?
+<LI> What are some equivalent characterizations of graphs in C?
+<LI> How do graphs in C relate to other graph classes that
+	we've seen?  Is there some graph class that is a subset of C?
+	Is C a subset of some other graph class?  What about the
+	complements of graphs in C?
+<LI> Are there any problems that are normally NP-hard, but become
+	polynomial on graphs in C?  (Of particular interest are
+	problems that aren't polynomial on some superclass of C.)
+<LI> Are there any problems that are still NP-hard on graphs in C?
+	(We want problems that aren't NP-hard on some
+	subclass of C.)
+<LI> Are there some polynomial-time problems that can be solved even
+	faster on a graph in C?
+</UL>
+<p>
+Some rules:
+<UL>
+<LI> The work for this project consists mostly in finding the right
+references.  You should skim all references to be sure you understand
+what they're saying, but you probably don't need to read all the
+details.    
+<LI> Finding the appropriate references is part of your project.
+The book by Brandst&auml;dt, Le and Spinrad [BLS99] is a very good
+starting point.   However, there are more references out there.
+Search the Web with <A href="http://www.google.com/">Google</A>.
+Search <A href="http://www.ams.org/mathscinet/search">MathSci</A>
+with keywords. Search, search, search,...
+<LI> Most of the results that you mention should be given without proof.
+However, include a few simple proofs (or one substantial one),
+or give a number of proofsketches.  Be guided by that your material
+should cover one lecture's worth, and it should be interesting.
+<LI> Part of your project is to assemble a long bibliography with many
+references to this graph class.  Make sure you have
+all references available in some form; I might ask you for some of them.
+</UL>
+<p>
+
+Here are some graph classes that would be worth studying (most names are
+taken from [BLS99]; there are other names for them out there, too).  
+You're free to do something else ([BLS99] has lots and lots
+of graph classes), but let me know beforehand.
+<p>
+
+<OL>
+<LI> Split graphs.
+	<font color="green">
+	<br> Project report by J.P. Pretti available
+		in <A href="source/split.ps">PostScript</A>.
+	</font>
+<LI> Permutation graphs.
+<LI> Threshold graphs.
+	<br> <font color="red">This project has been taken.</font>
+	<!-- Josh Lessard -->	
+<LI> Superperfect graphs.
+<LI> Unit interval graphs.
+<LI> Circle graphs.
+<LI> Line graphs.
+<LI> VPT-graphs (vertex-intersection graphs of paths in a tree).
+<LI> EPT-graphs (edge-intersection graphs of paths in a tree).
+<LI> House-Hole-Domino-free graphs.
+	<font color="green">
+	<br> Project report by Henning Stehr available
+		in <A href="source/hhd-free.ps">PostScript</A>.
+	</font>
+<LI> Clique-Helly graphs.
+	<font color="green">
+	<br> Project report by Alastair Farrugia available
+		in <A href="source/clique-Helly.ps">PostScript</A>.
+	</font>
+<LI> Partial 3-trees
+<LI> Graphs of bounded pathwidth
+<LI> Graphs of bounded branchwidth (see [Bod98])
+	<br> <font color="red">This project has been taken.</font>
+	<!-- Joe Capka? -->	
+<LI> Toroidal graphs
+</OL>
+
+<A name="project2">
+<H3> Filling in details</H3>
+
+Another project would be to fill in the details of one 
+theorem/algorithm/reduction that has been mentioned in class (or is
+closely related to something we did in class).
+I will provide some ideas and references below.
+<p>
+Some rules:
+<UL>
+<LI> The work in this project consists mostly in thoroughly understanding
+	the reference (or the relevant part of it).  You should be able
+	to explain every step of the proof.  You should also try to rewrite
+	it more clearly.  
+<LI> The given reference is only a suggestion.  Feel free to search for
+	a better exposition (in particular
+	if it is an older topic and I have given you
+	the original reference).  Some web searching might not hurt.
+<LI> You don't necessarily need to follow the reference
+	exactly in your rewriting; if you see a simplification definitely go
+	for it.  However, indicate clearly if there is a major part that you
+	have developed yourself.
+<LI> For the projects listed below, I have not necessarily read or
+	understood the paper myself.  I cannot judge the difficulty
+	of these projects beforehand - accept at your own risk.    
+	Projects marked with (*) are probably harder than the others.
+<LI> The grade will take the difficulty of the project into
+	account.  If your project seems ridiculously easy, think about
+	related things to add (or if you can't think of any, contact me).
+	On the other hand, if your project seems outrageously hard (in
+	particular if you are stuck entirely on some proof), contact me
+	in advance.
+<LI> I may (and I will if I'm confused) ask you questions about
+	the project, either during the final oral exam or in a separate
+	session, if needed.  Your ability to answer such questions is
+	part of the grade for the project.  Be sure that you have really
+	understood every sentence that you've written.
+</UL>
+
+Here are some suggested topics:
+<OL>
+<LI> <b>Hamiltonian cycles in interval graphs</b><br>
+	Explain how to find a Hamiltonian cycle in an interval graph
+	in linear time (see e.g. Chang, Peng and Liaw, Deferred-query
+	- an efficient approach for problems on interval and circular-arc 
+	graphs.  Proceedings of Workshop on Algorithms and Data Structures
+	(WADS'93), Lecture Notes in Computer Science, page 223-233, 1993.)
+	<br> <font color="red">This project has been taken.</font>
+	<!-- Hubert Chan -->	
+	<p>
+<LI> <b>Chordal graphs and asteroidal triples</b><br>
+	It is known that a graph is an interval graph if and only
+	if it is chordal and has no asteroidal triple (a special subgraph).
+	Explain the proof of this theorem (e.g. 
+	Lekkerkerker and Boland, Representation of finite
+	graph by a set of intervals on the real line, Fund. Math. 51
+	(1962), pp. 45-64).   
+	<br> <font color="red">This project has been taken.</font>
+	<!-- Mike Newman -->	
+	<P>
+<LI> <b>Maximum cut in chordal graphs</b><br>
+	Explain why the MaxCut problem is NP-hard in chordal graphs
+	(see e.g. Bodlaender and Jansen, On the Complexity of the Maximum
+	Cut Problem, Symposium on Theoretical Aspects of Computer Science,
+	pp. 769-780, 1994).
+	<font color="green">
+	<br> Project report by Fred Comeau available
+		in <A href="source/maxcut.ps">PostScript</A>.
+	</font>
+	<p>
+<LI> <b>Recognizing comparability graphs</b><br>
+	Explain a poly-time algorithm to test whether a graph is a 
+	comparability graph, and if so, to find the transitive orientation.  
+	(see e.g. [Gol80], Chapter 5).
+	<br> <font color="red">This project has been taken.</font>
+	<!-- Philip Yang -->	
+	<p>
+<LI> <b>Dilworth's theorem</b><br>
+	Dilworth's theorem states that in a comparability graph, the
+	maximum independent set and the minimum clique cover have the
+	same size.  (It is usually stated in terms of chains and
+	antichains.) <br>
+	Find as many different proofs of Dilworth's theorem as you can, and
+	summarize them.  (Finding them is part of the project; no
+	references will be given.)<br>
+	This project should only be done by someone with significant 
+	prior exposure to linear and combinatorial optimization. 
+	<p>
+<LI> <b>PQ-trees</b>(*)<br>
+	Explain how to test for the consecutive 1s property with PQ-trees, 
+	and in particular why this works in linear time (see e.g.
+	Booth and Lueker, Testing for the consecutive
+	ones property, interval graphs, and graph planarity using
+	PQ-tree algorithms, J. Comput. Syst. Sci 13, 1976, pp. 335-379).
+	<br> <font color="red">This project has been taken.</font>
+	<!-- Matthew Skala -->
+	<p>
+<LI> <b>Perfect Graph Theorem</b><br>
+	Rewrite the proof of the perfect graph theorem (see e.g.
+	[G80], Section 3.2).
+	<font color="green">
+	<br> Project report by Vlad Ciubotariu available
+		in <A href="source/PGT.ps">PostScript</A>.
+	</font>
+	<p>
+<LI> <b>Recognizing Line Graphs</b><br>
+	Explain one of the algorithms to recognize line graphs in linear
+	time (e.g. "N.D. Roussopoulos, A max{m,n} Algorithm for
+	Detercting the Graph H from its Line Graph G, Information
+	Processing Letters 2 (1973), pp. 102-112.".)   <br>
+	(This could be a project for more than one person; then more
+	than one algorithm should be presented.)
+	<br> <font color="red">This project has been taken.</font>
+	<!-- Andreas Grau -->
+	<p>
+<LI> <b>Recognizing Circular Arc Graphs</b><br>
+	Explain one of the algorithms to recognize circular arc graphs
+	in polynomial time (for example R.M. McConnell, Linear time
+	recogniziton of circular-arc graphs.  Proceedings of the
+	42nd Ann. Symp. Foundations of Computer Science (FOCS01), 2001,
+	pages 386-394.  Available from 
+	<A href="http://carbon.cudenver.edu/~rmcconne/work.html">the web</A>.)
+	<br>
+	(This could be a project for more than one person; then more
+	than one algorithm should be presented.)
+	<br> <font color="red">This project has been taken.</font>
+	<!-- Mark Petrick -->
+	<p>
+<LI> <b>Coloring circular arc graphs</b><br>
+	Explain why coloring is NP-hard in circular arc graphs.
+	(e.g. Garey, Johnson, Miller and Papadimitriou,
+	The complexity of coloring circular arcs and chords, SIAM
+	J. Algebraic Discrete Methods 1, no. 2 (1980), pp. 216-227). 
+	<p>
+<LI> <b>Recognizing 2-interval graphs</b><br>
+	Explain why recognizing 2-intervals graphs is NP-hard
+	(e.g. West and Shmoys, Recognizing Graphs with Fixed
+	Interval Number is NP-complete, Discrete Applied Mathematics 8
+	(1984), pp. 295-305). 
+	<p>
+<LI> <b>Recognizing boxicity-2 graphs</b><br>
+	Explain why it is NP-hard to test whether a graph is
+	a boxicity-2 graph (e.g. Kratochvil, A special planar
+	satisfiability problem and a consequence of its NP-completeness,
+	Discrete Applied Mathematics 52 (1994), 233-252).
+	<p>
+<LI> <b>Outerplanar graphs as visibility graphs</b><br>
+	Explain why every outerplanar
+	graph is the visibility graph of some polygon
+	(e.g. Lin and Skiena, Complexity aspects of visibility
+	graphs, Internat. J. Compu. Geom. 5 (1995), pp. 289-312.)
+	<p>
+<LI> <b>Visibility graphs of segments</b><br>
+	Explain the algorithm to recognize whether a planar graph
+	is a visibility graph (e.g.  Everett, Hoang, Kilakos and Noy,
+	Planar segment visibility graphs, Computational Geometry
+	16, no. 4 (2000), pages 235-243; available also on
+	<A href="http://www.loria.fr/~everett/publications/planar.html">
+	the web</A>.)
+	<!-- Masud Hasan -->
+	<font color="green">
+	<br> Project report by Masud Hasan available
+		in <A href="source/visgraphs.ps">PostScript</A>.
+	</font>
+	<p>
+<LI> <b>Hamiltonian cycle on partial k-trees</b><br>	
+	Explain and implement the dynamic programming algorithm
+	for Hamiltonian Cycle in partial k-trees.
+	<br> <font color="red">This project has been taken.</font>
+	<!-- Michael Laszlo -->
+	<p>
+<LI> <b>Edge-Disjoint paths in partial 3-trees</b><br>
+	Explain why the edge-disjoint paths problem is NP-hard for
+	partial 3-trees (e.g. Zhou and Nishizeki, Proceedings of
+	ISAAC'98, Lecture Notes in Computer Science 1533, pp. 417-426, 1998).
+	<p>
+<LI> <b>Recognizing partial k-trees</b><br>
+	Explain why recognizing partial k-trees
+	is NP-hard if k is part of the input (e.g.
+	Arnborg, Corneil and Proskurowski, Complexity
+	of finding embeddings in a k-tree, SIAM J. Alg. Disc. Math. 8,
+	no. 2 (1987), pp. 277-284).  
+	<p>
+<LI> <b>Approximation algorithm for treewidth</b><br>
+	Explain one of the algorithms to find the treewidth of a graph
+	within a factor of 3 or 4 in polynomial time.  ([Bod93] contains
+	most of the references and a brief outline.) 
+	<font color="green">
+	<br> Project report by Mohammad Ali Safari available
+		in <A href="source/approx-tw.ps">PostScript</A>.
+	</font>
+	<p>
+<LI> <b>Satisfiability in planar nested graphs</b><br>
+	Explain that SAT is solvable in linear time if the corresponding
+	graph can be drawn as nested graph, i.e., with either all
+	variable-vertices on the outer face or all clause-vertices on
+	the outer-face.  (Two references:  Knuth, Nested satisfiability,
+	Acta Informatica 28, pp. 1-6, 1990 and Kratochvil and Krivanek,
+	Satisfiability of co-nested formulas, Acta Informatica 30 (4), 
+	pp. 397-403, 1993.)
+	<p>
+<LI> <b>Shortest paths in planar graphs</b>(*)<br>
+	Explain how to find a shortest path in a planar graph in linear
+	time (e.g.  Henzinger, Klein and Rao, Faster Shortest-Path
+	Algorithms for Planar Graphs, J. Computer System Sciences 55 (1997),
+	pp. 3-23). 
+	<p>
+</OL>
+
+A lot of the references above exist in paper-form in my office.  So if
+	you're too lazy to go to the library, bug me and I can lend you my
+	copy for xeroxing.
+
+<H3> General rules </H3>
+<A name="morerules">
+
+<UL>
+<LI> Topics, and how to choose them:
+	<UL>
+	<LI> The suggested topics are just that - suggestions.  You're
+	welcome to do some similar project, however, check
+	<b>beforehand</b> with me whether what you are
+	planning is an acceptable project.
+	<LI> Each topic listed below can only be done once.  It will
+	be marked clearly on this page when a project has
+	been taken.
+	<LI> To "take" a project, send me email.  Don't assume that
+	it is yours until I have responded in the affirmative.
+	<LI> You should have at least skimmed a few references for
+	the project before taking it.  Once you've taken it, it's yours,
+	regardless of how difficult it may be.
+	</UL>
+<LI> Doing the project:
+	<UL>
+	<LI> Projects can be done in groups of arbitrary size,
+	however, projects done by a group of size k should contain
+	enough material for k lectures.
+	<LI> Your feedback from the project should be a written report.
+	I highly prefer LaTeX as format, but if you want to,
+	you can also do Word or similar.  If you really want to, you
+	can also do handwritten (but I don't see the advantage).
+	<LI> Be sure to include a bibliography.  You
+	should have obtained every paper that you cite.  I might ask you
+	for some of those papers, so please have them ready in case I
+	want to take a photocopy of them.
+	<LI> Project reports should ideally be given to me in printed form;
+	email submissions will only be accepted if they are in PostScript
+	and print without
+	further manipulation on ljp_cs, so try that before (and then you 
+	might as well give me the printout...)  Slide the project report
+	under my door if you can't find me.
+	</UL>
+<LI> Deadlines: <br>
+	<table>
+	<tr> <td> Date <td> What 
+	<tr> <td> March 1-15<td> Skim references for projects
+	<tr> <td> March 15<td> Choose project
+	<tr> <td> March 25<td> Give preliminary report to me
+	<tr> <td> April 1<td> Give final report to me.
+	</table>
+	Only the last deadline is strict, but that one is very strict:
+	<UL>
+	<LI> Projects reports are due on April 2nd by 9am 
+	(effectively therefore, hand them in on April 1st).  
+	<LI> Every day that your project report is late will
+	deduct 5 percentage points from it, so after 6 days, you might
+	as well not hand in the project report.  (This is a tight deadline,
+	even in the case of illness or other desasters, since I must have time 
+	to grade the reports before the final exams. )
+	<LI> You should send me whatever you have on March 25th.
+	This will not be enforced, but if you don't do it, and sudden illness 
+	or other desasters strike between then and April 2nd, the 5 points per
+	day rule will be enforced ruthlessly.
+	</UL>
+<LI> Publicity and Accessability: <br>
+
+	I would like to make project reports available on the web page,
+	since other students will probably be interested in them as well.
+	I will return your graded project report to you; please incorporate
+	easy improvements that may have been marked and send me a PostScript
+	file of the report.
+</UL>
+
+<H3> Some suggestions for not losing marks unnecessarily </H3>
+	
+	<UL>
+	<LI> Quality of presentation is very important.  Your project
+	report should be easy and enjoyable to read.  In particular:
+		<UL>
+		<LI> Break your presentation down into readable chunks.
+		Group related topics into sections, break them down into
+		subsections if appropriate.  Clearly mark what the theorems
+		and what the proofs are.  
+		<LI> Motivate what you're doing.  Giving the history of a
+		topic (who did what when, in parallel with who?) is often
+		entertaining, so if there is a colorful history, give it.
+		If there are nice applications of your graph class/result,
+		mention it.  Anything to excite the reader.
+		<LI> Explain what you're doing.   The good
+		old suggestion "Say what you're going to do.  Then do it.
+		Then say what you just have done." applies.  Every section
+		(and most subsections) should start with a brief outline
+		of what they contain.  Most proofs benefit from first giving
+		the overall idea of the proof, and then giving the nitty-gritty
+		details.
+		<LI> Pictures are really helpful.  While you should avoid
+		giving a definition only in a picture, it helps a lot to
+		give the definition in the text and illustrate it in a 
+		picture.  Similar holds for proof ideas.
+		<LI> For complicated definitions, it helps to say the same
+		thing twice in two different ways (often first informally
+		and then very precise).  For example, I could say
+		"An interval graph is the intersection graph of intervals
+		on the real line.  Thus, an interval graph has
+		for every vertex i an interval I_i = {f_i,s_i}, and
+		edge (i,j) exists if and only if I_i \cap I_j \neq \emptyset."
+		<LI> Definitely use a spell checker.  If you use latex under
+		unix, one way to do this is to type "spell filename.tex > 
+		result" (where filename.tex is the LaTeX file), and then 
+		look into file "result".  You will find some strange things
+		in there (resulting from the LaTeX commands), but usually
+		the misspelled words stick out.  Grammar errors are excusable
+		(to a certain degree).  Spelling errors are not.
+		<LI> Try to avoid grammar errors.  I will have some leniency
+		towards grammar errors (in particular for people for who
+		English is not the native language), but if there are so many
+		grammar errors that I cannot understand what you mean, this
+		will lead to deduction.  If you're not sure how to say 
+		something, say it twice in two different ways (see above).
+		<LI> For those that are not English-native:  Do not panic!
+		Good writing style is not the same as flawless English 
+		grammar (and in fact, some of the best writing I've seen comes
+		from non-natives).    Focus on explaining things well and
+		you'll be fine.
+	</UL>
+	
+	<LI> Your project report should be intelligible to someone who
+	has taken the class.  Thus, anything that has been defined in
+	class need not be redefined.   On the other hand, obscure
+	explanations (and in particular, an "it is obvious" when it
+	isn't obvious) will reduce the grade.
+	<LI> The contents of your project report should be approximately
+	equivalent to the amount that could be covered in one lecture
+	of class.  Thus, I would expect it to be 4-8 pages long, depending
+	on the font, number of pictures, etc.
+	</UL>
+	
+
+</DIV>
+	<P>
+	<HR>
+	<SPAN CLASS="footnote">Webmaster:
+	<A HREF="mailto: cs762@student.math.uwaterloo.ca "> cs762@student.math.uwaterloo.ca </A></SPAN><BR><SPAN CLASS="footnote">Last modified: 05/17/2002</SPAN>
+  </TD>
+  </TABLE>
+
+  </BODY>
+  </HTML>
+  

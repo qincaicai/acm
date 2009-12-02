@@ -1,0 +1,28 @@
+-- Problem   Drink, on Ice
+-- Algorithm Thermodynamics
+-- Runtime   O(1)
+-- Author    Walter Guttmann
+-- Date      04.05.2003
+
+import Numeric;
+
+main :: IO ()
+main =
+  do input <- readFile "drink.in"
+     mapM_ solve $ cases $ map read $ words input
+
+cases :: [Double] -> [(Double,Double,Double,Double)]
+cases (0.0:0.0:0.0:0.0:_) = []
+cases (mw:mi:tw:ti:xs) = (mw,mi,tw,ti) : cases xs
+
+solve :: (Double,Double,Double,Double) -> IO ()
+solve (mw,mi,tw,ti) = putStrLn $ format (m-mw_n) " g of ice and " ++ format mw_n " g of water at " ++ format t_n " C"
+  where format = showFFloat (Just 1)
+        (ci,cw,em,np) = (2.09,4.19,335.0,30.0)
+        m = mw + mi
+        e = mi * ci * (np + ti) + mw * (ci * np + em + cw * tw)
+        (mw_n,t_n) =
+          if e < m * ci * np then (0.0,e / (m * ci) - np)
+          else if e < m * ci * np + m * em then ((e - m * ci * np) / em,0.0)
+          else (m,(e - m * ci * np - m * em) / (m * cw))
+

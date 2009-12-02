@@ -1,0 +1,21 @@
+-- Problem   Assistance Required
+-- Algorithm Recursion
+-- Runtime   O(n*l(n)) where l(n) is the number of lucky numbers <= n
+-- Author    Walter Guttmann
+-- Date      31.12.2001
+
+main :: IO ()
+main =
+  do input <- readFile "assist.in"
+     mapM_ solve $ takeWhile (> 0) $ map read $ words input
+
+solve :: Int -> IO ()
+solve n = print (lucky [2..] !! (n-1))
+
+lucky :: [Int] -> [Int]
+lucky (x:xs) = x : lucky (removeNth x x xs)
+
+removeNth :: Int -> Int -> [a] -> [a]
+removeNth n 1 (_:xs) = removeNth n n xs
+removeNth n k (x:xs) = x : removeNth n (k-1) xs
+

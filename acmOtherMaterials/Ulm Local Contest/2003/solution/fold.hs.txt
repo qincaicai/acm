@@ -1,0 +1,21 @@
+-- Problem   Fold
+-- Algorithm Dynamic Programming
+-- Runtime   O(n^4)
+-- Author    Walter Guttmann
+-- Date      21.04.2003
+
+main :: IO ()
+main = readFile "fold.in" >>= mapM_ solve . words
+
+solve :: String -> IO ()
+solve s = putStrLn $ show $ head $ last dp
+  where n = length s
+        rs = reverse s
+        match = [ length (takeWhile av (zip s1 s2)) | k <- [1..n] , let s1 = drop k s , let s2 = drop (n+1-k) rs ]
+        dp = replicate (n+1) 0 : [ [ minimum [ 1 + max (dp !! (k-i) !! i) (dp !! (j-l) !! l) | k <- [i..j-1] , let l = k+1 , match !! k >= min (k-i) (j-l) ] | j <- [ji..n] , let i = j-ji ] | ji <- [1..n] ]
+
+av :: (Char,Char) -> Bool
+av ('A','V') = True
+av ('V','A') = True
+av _         = False
+

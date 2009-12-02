@@ -1,0 +1,81 @@
+-- Problem   Fractran
+-- Algorithm Simulation
+-- Runtime   O(n)
+-- Author    Walter Guttmann
+-- Date      2003.09.12
+
+import List;
+import Maybe;
+
+main :: IO ()
+main =
+  do input <- readFile "fractran.in"
+     mapM_ (putStrLn . concat . intersperse " " . map show . solve) $ cases $ map read $ words input
+
+cases :: [Int] -> [(Int,PEs,E)]
+cases (0:_) = []
+cases (m:n:k:xs) = (m,toPEs n,toPEs2 fs) : cases gs
+  where (fs,gs) = splitAt (2*k) xs
+
+solve :: (Int,PEs,E) -> [Int]
+solve (m,n0,fs) = take m [ log2 n | n <- iterate (step fs) n0 , is2power n ]
+
+step :: E -> PEs -> PEs
+step fs n = head [ fromJust x `multiply` num |
+                   (num,den) <- fs , let x = n `divide` den , isJust x ]
+
+-- (prime number,exponent)
+type PE  = (Int,Int)
+type PEs = [PE]
+type E   = [(PEs,PEs)]
+
+primes :: [Int]
+primes = sieve [2..]
+  where sieve :: [Int] -> [Int]
+        sieve (p:xs) = p : sieve [ x | x <- xs , x `mod` p /= 0 ]
+
+toPEs :: Int -> PEs
+toPEs = toPEs' primes
+  where toPEs' :: [Int] -> Int -> PEs
+        toPEs' _      1         = []
+        toPEs' (p:ps) x | x > 1 =
+          let (ds,x':_) = span (\z -> z `mod` p == 0) $ iterate (`div` p) x
+              lds       = length ds
+          in [ (p,lds) | lds > 0 ] ++ toPEs' ps x'
+
+toPEs2 :: [Int] -> E
+toPEs2 [] = []
+toPEs2 (n:d:xs) = (toPEs n,toPEs d) : toPEs2 xs
+
+multiply :: PEs -> PEs -> PEs
+multiply xs           []           = xs
+multiply []           ys           = ys
+multiply ((xp,xe):xs) ((yp,ye):ys) =
+  case compare xp yp of
+    LT -> (xp,xe)    : multiply xs           ((yp,ye):ys)
+    EQ -> (xp,xe+ye) : multiply xs           ys
+    GT -> (yp,ye)    : multiply ((xp,xe):xs) ys
+
+divide :: PEs -> PEs -> Maybe PEs
+divide xs           []           = Just xs
+divide []           (y:ys)       = Nothing
+divide ((xp,xe):xs) ((yp,ye):ys) =
+  case compare xp yp of
+    LT -> case divide xs ((yp,ye):ys) of
+            Nothing  -> Nothing
+            Just pes -> Just ((xp,xe) : pes)
+    EQ -> case compare xe ye of
+            LT -> Nothing
+            EQ -> divide xs ys
+            GT -> case divide xs ys of
+                    Nothing  -> Nothing
+                    Just pes -> Just ((xp,xe-ye) : pes)
+    GT -> Nothing
+
+is2power :: PEs -> Bool
+is2power pes = null [ e | (p,e) <- pes , p /= 2 ]
+
+log2 :: PEs -> Int
+log2 [] = 0
+log2 [(2,e)] = e
+

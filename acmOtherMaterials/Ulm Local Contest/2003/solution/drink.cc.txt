@@ -1,0 +1,95 @@
+// Problem   Drink
+// Algorithm Simulation
+// Runtime   O(1)
+// Author    Walter Guttmann
+// Date      24.01.2003
+
+#include <cassert>
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+ifstream in ("drink.in");
+
+const double cw = 4.19;
+const double ci = 2.09;
+const double em = 335.0;
+
+int main ()
+{
+  cout.setf(ios::fixed);
+  cout.precision(1);
+  while (1)
+  {
+    double mw, mi, tw, ti;
+    in >> mw >> mi >> tw >> ti;
+    if (mw == 0.0 && mi == 0.0 && tw == 0.0 && ti == 0.0)
+      break;
+    assert(mw >= 0.0 && mi >= 0.0 && mw + mi > 0.0);
+    assert(0.0 <= tw && tw < 100.0 && -30.0 < ti && ti <= 0.0);
+
+    double water0 = cw * mw * tw;
+    double ice0 = ci * mi * (- ti);
+    if (water0 <= ice0)
+    {
+      // cool water to zero
+      ice0 -= water0;
+      tw = 0.0;
+      ti = (- ice0) / (ci * mi);
+      // freeze some water
+      water0 = em * mw;
+      if (water0 <= ice0)
+      {
+        // freeze all water
+        ice0 -= water0;
+        ti = (- ice0) / (ci * mi);
+        // mw now denotes ice of temperature 0
+        // find equilibrium at temperature t where mi * t = mw * (tw - t)
+        ti = mi * ti / (mi + mw);
+        mi += mw;
+        mw = 0.0;
+      }
+      else
+      {
+        // heat ice to zero
+        ti = 0.0;
+        mw -= ice0 / em;
+        mi += ice0 / em;
+      }
+    }
+    else
+    {
+      // heat ice to zero
+      water0 -= ice0;
+      tw = water0 / (cw * mw);
+      ti = 0.0;
+      // melt some ice
+      ice0 = em * mi;
+      if (water0 <= ice0)
+      {
+        // cool water to zero
+        tw = 0.0;
+        mw += water0 / em;
+        mi -= water0 / em;
+      }
+      else
+      {
+        // melt all ice
+        water0 -= ice0;
+        tw = water0 / (cw * mw);
+        // mi now denotes water of temperature 0
+        // find equilibrium at temperature t where mi * t = mw * (tw - t)
+        tw = mw * tw / (mw + mi);
+        mw += mi;
+        mi = 0.0;
+      }
+    }
+
+    cout << mi << " g of ice and "
+         << mw << " g of water at "
+         << ti+tw << " C" << endl;
+  }
+  return 0;
+}
+

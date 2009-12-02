@@ -1,0 +1,61 @@
+// Problem   Huffman's Greed
+// Algorithm Dynamic Programming
+// Runtime   O(n^3)
+// Author    Walter Guttmann
+// Date      2003.12.07
+
+#include <cassert>
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+ifstream in("greed.in");
+
+// ps[i] == q[0]+p[1]+q[1]+...+p[i]+q[i] (i.e., partial sums of the probabilities).
+int ps[256];
+
+// i<=j ==> dp[i][j] == optimum cost of arranging the labels K[i+1],...,K[j] in a tree.
+// The corresponding probabilities are q[i],p[i+1],q[i+1],...,p[j],q[j].
+int dp[256][256];
+
+int main()
+{
+  int n;
+  while (in >> n)
+  {
+    if (n == 0)
+      break;
+    assert(1 <= n && n <= 200);
+    int p[256], q[256];
+    for (int i=1 ; i<=n ; i++)
+      in >> p[i];
+    for (int i=0 ; i<=n ; i++)
+      in >> q[i];
+
+    // Calculate the partial sums.
+    ps[0] = q[0];
+    for (int i=1 ; i<=n ; i++)
+      ps[i] = ps[i-1] + p[i] + q[i];
+
+    // Calculate the optimum costs in the order of increasing difference d = j-i.
+    for (int i=0 ; i<=n ; i++)
+      dp[i][i] = 0;
+    for (int d=1 ; d<=n ; d++)
+      for (int i=0, j=i+d ; j<=n ; i++, j++)
+      {
+        // Any of K[i+1],...,K[j] may be at the root of the tree containing these labels.
+        // This is the special case K[i+1]:
+        dp[i][j] = dp[i+1][j];
+        // These are the other cases K[i+2],...,K[j]:
+        for (int k=i+2 ; k<=j ; k++)
+          dp[i][j] = min(dp[i][j], dp[i][k-1] + dp[k][j]);
+        // Finally, this constant amount arises in all cases considered:
+        dp[i][j] += ps[j] - ps[i] + q[i];
+      }
+
+    cout << dp[0][n] << endl;
+  }
+  return 0;
+}
+

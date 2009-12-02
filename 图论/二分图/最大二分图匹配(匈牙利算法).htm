@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>最大二分图匹配(匈牙利算法)--caojia321的博客</title>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+<META HTTP-EQUIV="Expires" CONTENT="0"> 
+<META CONTENT="zoj 1495 哈 又一道dp最大二分图匹配(匈牙利算法)最小路径覆盖  博客 博客中国 博客动力 blog blogdriver blogger 中国" NAME="description"> 
+<META NAME="keywords" CONTENT="caojia321的博客 zoj 1495 哈 又一道dp最大二分图匹配(匈牙利算法)最小路径覆盖 博客 博客中国 博客动力 blog blogdriver blogger 中国"> 
+<link href="diary.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="/jsp/js/UBB.js"></script>
+<script type="text/javascript" src="/jsp/js/blog.js"></script>	
+</head>
+<body>
+  <div id="container">
+    <div id="header"><h1 class="title"><a href="index.html">caojia321的博客</a></h1></div>
+	<div id="category">	<a href="2372653.html" title="上一篇">zoj 1495 哈 又一道dp</a>- -|
+		<a href="index.html">回首页</a> | <a href="catalog_2005.html">2005年索引</a>
+	| - -<a href="2415567.html" title="下一篇">最小路径覆盖</a></div>
+ <div class="entity">
+			    <h2 class="diaryTitle">最大二分图匹配(匈牙利算法)</h2>				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 
+				 <p><p>&nbsp;&nbsp;&nbsp; 最近队里流行二分图,不能落下,呵呵我也看了。二分图指的是这样一种图：其所有的顶点分成两个集合M和N，其中M或N中任意两个在同一集合中的点都不相连。二分图匹配是指求出一组边，其中的顶点分别在两个集合中，并且任意两条边都没有相同的顶点，这组边叫做二分图的匹配，而所能得到的最大的边的个数，叫做最大匹配。</p><p>计算二分图的算法有网络流算法和匈牙利算法（目前就知道这两种），其中匈牙利算法是比较巧妙的，具体过程如下（转自组合数学）：</p><p><font color="#ff0000">令g=（x,*,y）是一个二分图，其中x={x1,x2...},y={y1,y2,....}.令m为g中的任意匹配。 <br /><br />1。将x的所有不与m的边关联的顶点表上￥，并称所有的顶点为未扫描的。转到2。 <br /><br />2。如果在上一步没有新的标记加到x的顶点上，则停，否则 ，转3 <br /><br />3。当存在x被标记但未被扫描的顶点时，选择一个被标记但未被扫描的x的顶点，比如xi，用（xi）标 <br /><br />记y 的所有顶点，这些顶点被不属于m且尚未标记的边连到xi。 <br /><br />&nbsp;现在顶点xi 是被扫描的。如果不存在被标记但未被扫描的顶点，转4。 <br /><br />4。如果在步骤3没有新的标记被标记到y的顶点上，则停，否则转5。 <br /><br />5。当存在y被标记但未被扫描的顶点时。选择y的一个被标记但未被扫描的顶点，比如yj， <br /><br />用（yj）标记x的顶点，这些顶点被属于m且尚未标记的边连到yj。现在，顶点yj是被扫描的。 <br /><br />如果不存在被标记但未被扫描的顶点则转道2。 <br /><br />由于每一个顶点最多被标记一次且由于每一个顶点最多被扫描一次，本匹配算法在有限步内终止。 </font></p><p><font color="#ff0000"></font></p><p><font color="#000000">代码实现：</font></p><p><font color="#000000">bfs过程：</font></p><p><font color="#ff0000"></font></p><p><font color="#3300cc">#include&lt;stdio.h&gt;<br />#include&lt;string.h&gt;<br />main()<br />{<br />&nbsp;bool map[100][300];<br />&nbsp;int i,i1,i2,num,num1,que[300],cou,stu,match1[100],match2[300],pque,p1,now,prev[300],n;<br />&nbsp;scanf(&quot;%d&quot;,&amp;n);<br />&nbsp;for(i=0;i&lt;n;i++)<br />&nbsp;{<br />&nbsp;&nbsp;scanf(&quot;%d%d&quot;,&amp;cou,&amp;stu);<br />&nbsp;&nbsp;memset(map,0,sizeof(map));<br />&nbsp;&nbsp;for(i1=0;i1&lt;cou;i1++)<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;scanf(&quot;%d&quot;,&amp;num);<br />&nbsp;&nbsp;&nbsp;for(i2=0;i2&lt;num;i2++)<br />&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;scanf(&quot;%d&quot;,&amp;num1);<br />&nbsp;&nbsp;&nbsp;&nbsp;map[i1][num1-1]=true;<br />&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;}<br />&nbsp;&nbsp;num=0;<br />&nbsp;&nbsp;memset(match1,int(-1),sizeof(match1));<br />&nbsp;&nbsp;memset(match2,int(-1),sizeof(match2));<br />&nbsp;&nbsp;for(i1=0;i1&lt;cou;i1++)<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;p1=0;<br />&nbsp;&nbsp;&nbsp;pque=0;<br />&nbsp;&nbsp;&nbsp;for(i2=0;i2&lt;stu;i2++)<br />&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;if(map[i1][i2])<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prev[i2]=-1;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;que[pque++]=i2;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;else<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prev[i2]=-2;<br />&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;while(p1&lt;pque)<br />&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;now=que[p1];<br />&nbsp;&nbsp;&nbsp;&nbsp;if(match2[now]==-1)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />&nbsp;&nbsp;&nbsp;&nbsp;p1++;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(i2=0;i2&lt;stu;i2++)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(prev[i2]==-2&amp;&amp;map[match2[now]][i2])<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prev[i2]=now;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;que[pque++]=i2;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;if(p1==pque)<br />&nbsp;&nbsp;&nbsp;&nbsp;continue;<br />&nbsp;&nbsp;&nbsp;while(prev[now]&gt;=0)<br />&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;match1[match2[prev[now]]]=now;<br />&nbsp;&nbsp;&nbsp;&nbsp;match2[now]=match2[prev[now]];<br />&nbsp;&nbsp;&nbsp;&nbsp;now=prev[now];<br />&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;match2[now]=i1;<br />&nbsp;&nbsp;&nbsp;match1[i1]=now;<br />&nbsp;&nbsp;&nbsp;num++;<br />&nbsp;&nbsp;}<br />&nbsp;&nbsp;if(num==cou)<br />&nbsp;&nbsp;&nbsp;printf(&quot;YES\n&quot;);<br />&nbsp;&nbsp;else<br />&nbsp;&nbsp;&nbsp;printf(&quot;NO\n&quot;);<br />&nbsp;}<br />}</font></p><p><font color="#ff0000"></font></p><p><font color="#000000">dfs实现过程：</font></p><p><font color="#ff0000"></font></p><p><font color="#3300cc">#include&lt;stdio.h&gt;<br />#include&lt;string.h&gt;<br />#define MAX 100</font></p><p><font color="#3300cc">bool map[MAX][MAX],searched[MAX];<br />int prev[MAX],m,n;</font></p><p><font color="#3300cc">bool dfs(int data)<br />{<br />&nbsp;int i,temp;<br />&nbsp;for(i=0;i&lt;m;i++)<br />&nbsp;{<br />&nbsp;&nbsp;if(map[data][i]&amp;&amp;!searched[i])<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;searched[i]=true;<br />&nbsp;&nbsp;&nbsp;temp=prev[i];<br />&nbsp;&nbsp;&nbsp;prev[i]=data;<br />&nbsp;&nbsp;&nbsp;if(temp==-1||dfs(temp))<br />&nbsp;&nbsp;&nbsp;&nbsp;return true;<br />&nbsp;&nbsp;&nbsp;prev[i]=temp;<br />&nbsp;&nbsp;}<br />&nbsp;}<br />&nbsp;return false;<br />}</font></p><p><font color="#ff0000"><font color="#3300cc">main()<br />{<br />&nbsp;int num,i,k,temp1,temp2,job;<br />&nbsp;while(scanf(&quot;%d&quot;,&amp;n)!=EOF&amp;&amp;n!=0)<br />&nbsp;{<br />&nbsp;&nbsp;scanf(&quot;%d%d&quot;,&amp;m,&amp;k);<br />&nbsp;&nbsp;memset(map,0,sizeof(map));<br />&nbsp;&nbsp;memset(prev,int(-1),sizeof(prev));<br />&nbsp;&nbsp;memset(searched,0,sizeof(searched));<br />&nbsp;&nbsp;for(i=0;i&lt;k;i++)<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;scanf(&quot;%d%d%d&quot;,&amp;job,&amp;temp1,&amp;temp2);<br />&nbsp;&nbsp;&nbsp;if(temp1!=0&amp;&amp;temp2!=0)<br />&nbsp;&nbsp;&nbsp;&nbsp;map[temp1][temp2]=true;<br />&nbsp;&nbsp;}<br />&nbsp;&nbsp;num=0;<br />&nbsp;&nbsp;for(i=0;i&lt;n;i++)<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;memset(searched,0,sizeof(searched));<br />&nbsp;&nbsp;&nbsp;dfs(i);<br />&nbsp;&nbsp;}<br />&nbsp;&nbsp;for(i=0;i&lt;m;i++)<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;if(prev[i]!=-1)<br />&nbsp;&nbsp;&nbsp;&nbsp;num++;<br />&nbsp;&nbsp;}<br />&nbsp;&nbsp;printf(&quot;%d\n&quot;,num);<br />&nbsp;}<br />}</font></font></p><p><br /></p></p>
+             <p class="diaryFoot">【作者: <a href="javascript:void(0);" onClick="window.open('http://publishblog.blogchina.com/blog/postMessage.b?receiver=1235449','发送短消息','width=520, height=455')">caojia321</a>】【访问统计:<script language="JavaScript" src="http://counter.blogchina.com/PageServlet?pageid=2398867&blogid=1235370"></script>】【2005年07月27日 星期三 01:49】【
+             <a href="javascript:void(keyit=window.open('http://blogmark.blogchina.com/jsp/key/quickaddkey.jsp?k='+encodeURI('最大二分图匹配(匈牙利算法)')+'&u='+encodeURI('http://caojia321.blogchina.com/caojia321/2398867.html')+'&c='+encodeURI(''),'keyit','scrollbars=no,width=500,height=430,status=no,resizable=yes'));keyit.focus();">加入博采</a>】【<a href="javascript:window.print();" >打印</a>】 </td>
+             </p>
+				</div>
+ <div class="operation"> 
+    <a name="trackback"><H3>Trackback</H3></a>
+      <p class="trackback">你可以使用这个链接引用该篇文章 http://publishblog.blogchina.com/blog/tb.b?diaryID=2398867
+ </p>
+ </div>
+ 
+  				
+<div class="operation">
+     <a name="comment"><H3>回复</H3></a>
+	 <table width="700" border="0" cellpadding="0" cellspacing="0">     
+<tr align="left">
+<td rowspan="2" align="center">
+<img src="http://blog.bokee.com/img/unknowman.gif">
+
+</td>
+<td colspan="4"><H4><a name="comment$(remark.remarkID)"> - 评论人：看不懂</a>
+<span>&nbsp;&nbsp;2006-04-19 21:30:48&nbsp;<a  > <img src="http://blog.bokee.com/img/linkblog.jpg" border="0" > </a>　 
+</span></H4>
+ </td>
+</tr>    
+<tr align="left">
+<td colspan="4" valign="top"><P class="comment">我根本看不懂！！！！！！！！！！！！<br>SOS！！！！<br>
+</P></td>
+</tr>
+<tr align="left">
+<td rowspan="2" align="center">
+<img src="http://blog.bokee.com/img/unknowman.gif">
+
+</td>
+<td colspan="4"><H4><a name="comment$(remark.remarkID)"> - 评论人：wcwswswws</a>
+<span>&nbsp;&nbsp;2005-08-30 17:42:19&nbsp;<a  > <img src="http://blog.bokee.com/img/linkblog.jpg" border="0" > </a>　 
+</span></H4>
+ </td>
+</tr>    
+<tr align="left">
+<td colspan="4" valign="top"><P class="comment">太感谢你了<br>
+</P></td>
+</tr>
+<tr align="left">
+<td rowspan="2" align="center">
+<a href="http://wcwswswws.blogchina.com/" target="_blank"><img src="http://wcwswswws.blogchina.com/inc/logo_s.png" border="0"></a>
+
+</td>
+<td colspan="4"><H4><a name="comment$(remark.remarkID)"> - 评论人：wcwswswws</a>
+<span>&nbsp;&nbsp;2005-08-27 21:22:21&nbsp;<a  href="http://wcwswswws.blogchina.com/" target="_blank"  > <img src="http://blog.bokee.com/img/linkblog.jpg" border="0"  alt=" wcwswswws的博客 " > </a>　 
+</span></H4>
+ </td>
+</tr>    
+<tr align="left">
+<td colspan="4" valign="top"><P class="comment">这位仁兄语文很好<br>
+</P></td>
+</tr>
+</table>
+ </div>
+  <div class="operation"> 
+    <table width="700" border="0" cellpadding="0" cellspacing="0" class="comment">
+      <form id="replyForm" method="POST">
+        <input type="hidden" name="blogID" value="1235370">
+        <input type="hidden" name="diaryID" value="2398867">
+        <input type="hidden" name="blogDomino" value="caojia321">
+<script>
+if(getCookie('userID') == null){        
+document.write('<tr><td width="70">发布人：</td>');
+document.write('<td width="150"> <input name="remark.authorNameFUI" type="text" size="20" class="inputStyle" maxlength="20"></td>');
+document.write('<td width="70">邮箱：</td>');
+document.write('<td width="435"> <input name="remark.authorEmail" type="text" size="20" class="inputStyle" maxlength="40"></td>');
+document.write('</tr><tr><td>主　页：</td>');
+document.write('<td colspan="3"> <input name="remark.authorURL" type="text" class="inputStyle" value="HTTP://" size="63" maxlength="100"></td></tr>');
+}else{
+document.write('<input type="hidden" name="remark.authorNameFUI" value="Blogchina网友">');
+}
+</script>
+     <tr>
+      <td width="70">验证码：</td>
+      <td><input name="validateCode"  type="text" class="inputStyle" maxlength="4" size="20"></td><td>&nbsp;&nbsp<img src="http://publishblog.blogchina.com/servlet/getValidateImg" border="0"></td>
+     </tr>          
+        <tr align="left"> 
+          <td colspan="4">评论内容：<br/> <textarea name="remark.remarkFUI" id="remark" cols="60" rows="8" class="textStyle" >
+          </textarea> 
+          </td> 
+        </tr>
+        <tr align="left"> 
+          <td colspan="4"> 　　　　　　 　　　　　　 
+            <input type="button" value="提交" onClick="reply()" >
+            　 
+            <input type="reset" value="重置" > </td>
+        </tr>
+      </form>
+    </table>
+  </div>
+</div>	
+<script type="text/javascript" src="http://caojia321.blogchina.com/extend3.js"></script> 
+<div id="footer"><a href="http://blog.bokee.com/">2003-2004 BOKEE.COM All rights reserved</a><br/>
+<a href="http://www.blogdriver.com/">Powered by BlogDriver 2.1</a>
+</div>
+</body>
+</html>

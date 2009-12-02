@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0064)http://www.informatik.uni-ulm.de/acm/Locals/2005/html/judge.html -->
+<HTML><HEAD><TITLE>Judges' Comments on the Problems and their Solutions</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2900.2627" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>2005/2006 ACM International Collegiate Programming Contest 
+<BR>University of Ulm Local Contest 
+<P>
+<H1>Judges' Comments on the Problems and their Solutions</H1></CENTER>
+<P>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD>
+      <CENTER>Problem</CENTER></TD>
+    <TD>Name</TD>
+    <TD>
+      <CENTER>Rating</CENTER></TD>
+    <TD>Method</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>A</CENTER></TD>
+    <TD>Ambiguous permutations</TD>
+    <TD>
+      <CENTER>easy</CENTER></TD>
+    <TD>straightforward</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>B</CENTER></TD>
+    <TD>Bullshit Bingo</TD>
+    <TD>
+      <CENTER>easy</CENTER></TD>
+    <TD>string processing</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>C</CENTER></TD>
+    <TD>106 miles to Chicago</TD>
+    <TD>
+      <CENTER>easy</CENTER></TD>
+    <TD>floyd warshall</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>D</CENTER></TD>
+    <TD>Decorate the wall</TD>
+    <TD>
+      <CENTER>medium</CENTER></TD>
+    <TD>interval compression, rectangle intersection</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>E</CENTER></TD>
+    <TD>European railroad tracks</TD>
+    <TD>
+      <CENTER>hard</CENTER></TD>
+    <TD>backtracking</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>F</CENTER></TD>
+    <TD>Any fool can do it</TD>
+    <TD>
+      <CENTER>medium</CENTER></TD>
+    <TD>dynamic programming</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>G</CENTER></TD>
+    <TD>Game schedule required</TD>
+    <TD>
+      <CENTER>hard</CENTER></TD>
+    <TD>greedy</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>H</CENTER></TD>
+    <TD>Help the problem setter</TD>
+    <TD>
+      <CENTER>medium</CENTER></TD>
+    <TD>depth first search, math</TD></TR></TBODY></TABLE></CENTER>
+<P><B>Problem A: Ambiguous permutations</B>
+<P>
+<P>This problem is the easiest of the problemset. Just form the inverse 
+permutation of the given permutation, then check whether it is different or not. 
+</P>Let <I>p</I> be the array which contains the permutation. Build another 
+array <I>inv</I> which will contain the inverse permutation. According to the 
+definition of the inverse permutation, <I>inv[p[i]] = i</I>, because the integer 
+<I>p[i]</I> appears in position <I>i</I>. This leads to following pseudo-code 
+which computes the inverse permutation: <PRE>for i := 1 to n do
+	inv[ p[i] ] := i
+end
+</PRE>
+<P>Then, use another for loop to check whether for all <I>i</I> <I>p[i] = 
+inv[i]</I>.<BR>It is also possible to avoid using another array for the inverse 
+permutation. Since <I>inv[i]</I> gives the position of integer <I>i</I> in 
+<I>p</I>, <I>p[ inv[i] ] = i</I>. Therefore, the check <I>inv[i] = p[i]</I> is 
+equivalent to <I>i = p[ p[i] ]</I>. </P>
+<P>Judges' test data consists of 80 test cases: all possible test cases with 
+n&lt;=4, 43 random test cases with n &lt;= 10000, and 4 test cases with n = 
+100000. </P>
+<P><U>Rating: Easy</U> </P>
+<P><B>Problem B: Bullshit Bingo</B></P>
+<P>This problem is the second easiest of the problemset. Basically, you have to 
+extract the words from the given text, detect the word "BULLSHIT", which marks 
+the end of a game, and count the number of different words in each game. A 
+method to compare the words in a case-insensitive way is to convert them to 
+uppercase.<BR>The given limits allow inefficient solutions, there is no need to 
+use a hashtable for storing the different words. However, using a data structure 
+of a library of the programming language of your choice can simplify the problem 
+a lot.</P>
+<P>In order to produce the reduced fraction, it is fast enough to check all 
+numbers from <I>2</I> to <I>&lt;number of games&gt;</I> if they divide both the 
+numerator and the denominator. However, a more elegant solution calculates the 
+greatest common divisor of the numerator and the denominator using the Euclidean 
+algorithm. </P>
+<P>Judges' test data is derived from the manual of the programming language 
+INTERCAL. </P>
+<P><U>Rating: Easy</U> </P>
+<P><U>Reference</U> 
+<BLOCKQUOTE><A 
+  href="http://www.perkigoth.com/home/kermit/stuff/bullshitbingo/">Bullshit 
+  Bingo</A><BR><A href="http://www.catb.org/~esr/intercal/">INTERCAL programming 
+  language</A> </BLOCKQUOTE>
+<P></P>
+<P><B>Problem C: 106 miles to Chicago</B></P>
+<P>This problem is quite easy if you are familiar with shortest path 
+algorithms.<BR>First, you should convert the given percentage values into 
+absolute values by dividing by 100. Then, the safety value of a path is just the 
+product of the probabilities of the streets used.</P>
+<P>The judges' solution uses a modified Floyd-Warshall algorithm. Instead of 
+updating the best path from point <I>a</I> to <I>b</I> using the sum of the 
+paths from <I>a</I> to <I>c</I> and <I>c</I> to <I>b</I>, we take the product of 
+the values of the paths. </P>
+<P>Judges' test data consists of 80 randomly generated test cases. </P>
+<P><U>Rating: Easy</U> </P>
+<P><U>Reference</U> 
+<BLOCKQUOTE><A 
+  href="http://www.nederpoparchief.nl/bluesbrothers/106miles.wav">Blues 
+  Brothers</A><BR><A 
+  href="http://en.wikipedia.org/wiki/Floyd-Warshall_algorithm">Floyd-Warshall</A> 
+</BLOCKQUOTE>
+<P></P>
+<P><B>Problem D: Decorate the wall</B></P>
+<P>There is a simple solution to this problem, but if you do not see it, the 
+problem becomes quite tricky.<BR>First, you have to observe that the number of 
+positions you have to try to appoint to the lower left corner of the given 
+painting is limited. It makes no sense to place it somewhere where its left side 
+does not touch another painting (or the wall). The same is true for the bottom 
+of the painting.<BR>This observation reduces the number of points you have to 
+try to O(n<SUP>2</SUP>). For each point, check in O(n) if the painting 
+intersects with another painting. Thus, the overall complexity is 
+O(n<SUP>3</SUP>). </P>
+<P>There is also a O(n<SUP>2</SUP>) scanline algorithm, which is more difficult 
+to code.</P>
+<P>Judges' test data consists of 199 test cases with different values of 
+<I>n</I>. Most of the test cases are random-generated. </P>
+<P><U>Rating: Medium</U> </P>
+<P><B>Problem E: European railroad tracks</B></P>
+<P>It is important not to underestimate the difficulty of this problem. It is 
+clear that the given limits allow a backtracking solution, and in fact we do not 
+know if a polynomial solution for this problem exists.</P>
+<P>First, we can place one rail at position 0. Then, the backtracking procedure 
+tries to place a new rail in such a way that its distance to an already existing 
+rail is one of the given distances. If there are already <I>k</I> rails, for 
+each rail the procedure tries to place the new rail at the required distance 
+before or after that rail. However, it is not enough to try to construct the 
+required distances in the given order; this construction method requires to try 
+all permutations of the given distances.</P>
+<P>The complexity of this algorithm is O(2<SUP>n</SUP>*(n!)<SUP>2</SUP>). 
+However, the restriction that there will always be a solution with ≤ 5 rails 
+reduces it to a maximum of 2<SUP>5</SUP>*(5!)*(n!) steps.</P>
+<P>Judges' test data consists of 28 test cases, 16 of them are hand-crafted, 12 
+are random-generated. 
+<P><U>Rating: Hard</U> </P>
+<P><U>Reference</U> 
+<BLOCKQUOTE><A href="http://mathworld.wolfram.com/PerfectRuler.html">Perfect 
+  Ruler</A><BR><A href="http://www.sdrm.org/faqs/gauge/">Railway gauges</A> 
+</BLOCKQUOTE>
+<P></P>
+<P><B>Problem F: Any fool can do it</B></P>
+<P>The easiest way to solve this problem is to follow the informal description 
+of a set. One function returns if the string is a set or not. This function 
+calls another function which determines if a string is a list. A list is either 
+empty, has one element or has a ',' character which separates an element from 
+the remaining list. An element is either a set or consists of only one character 
+(a letter of the given alphabet).</P>
+<P>However, since in the function which checks if the string is a list we have 
+to try all ',' as a separator, we would calculate some results more than once 
+(in fact, the number of calculations grows exponentially). The standard trick is 
+to store the intermediate results and return a result directly instead of 
+calculating it again.</P>
+<P>Other methods to solve this problem: 
+<UL>
+  <LI>Use dynamic programming, which calculates the results with increasing 
+  length of the substrings. 
+  <LI>Convert the given grammar into Chomsky Normal Form and use the 
+  Cocke-Younger-Kasami (CYK) algorithm. 
+  <LI>Use an automaton-based approach which will lead to an O(n^2) algorithm 
+  (http://www.informatik.uni-ulm.de/acm/Locals/2005/solution/other/fool_peter.cc) 
+  </LI></UL>
+<P></P>
+<P>Judges' test data consists of 1200 test cases. It contains all possible 
+strings of length &lt;= 6, 5 timeout cases for recursive solutions without 
+memoization and 103 random test cases.</P>
+<P><U>Rating: Medium</U> </P>
+<P><U>Reference</U> 
+<BLOCKQUOTE><A href="http://en.wikipedia.org/wiki/CYK_algorithm">CYK 
+  algorithm</A> </BLOCKQUOTE>
+<P></P>
+<P><B>Problem G: Game schedule required</B></P>
+<P>This problem would be a lot easier if the number of teams were always a power 
+of 2. Just sort the teams by number of remaining games, and you will know which 
+team will be eliminated in which round. However, if the number of teams is no 
+power of 2, it may happen that a team winning the tournament has only one game, 
+but always gets a wildcard in the rounds before the final.<BR>Obviously, teams 
+with more than one remaining game have to advance to the next round (either by 
+winning a game, or by getting a wildcard). Consequently, teams with only one 
+remaining game are candidates for elimination.<BR>If the number of teams in the 
+current round is even, half of the teams will have only one remaining game, so 
+you just have to schedule these games in such a way that these teams will be 
+eliminated.<BR>If the number of teams in the current round is odd, there are two 
+cases: 
+<UL>
+  <LI>There are n div 2 teams with only one remaining game. Then, after 
+  scheduling these games, there will be one team which has more than one game 
+  left and plays no game in the current round and thus has to get the wildcard. 
+  <LI>There are n div 2 + 1 teams with only one remaining game. According to the 
+  pidgeonhole principle, there must be two teams with one remaining game which 
+  require the same opponent. One of these two teams has to get the wildcard, and 
+  it is easy to see that it doesn't matter which of them. </LI></UL>Therefore the 
+game schedule can be generated round by round (greedy algorithm). 
+<P></P>
+<P>Judges' test data consists of 50 test cases, 45 of them are 
+random-generated.</P>
+<P><U>Rating: Hard</U> </P>
+<P><U>Reference</U> 
+<BLOCKQUOTE><A 
+  href="http://en.wikipedia.org/wiki/Pigeonhole_principle">Pidgeonhole 
+  principle</A> </BLOCKQUOTE>
+<P></P>
+<P><B>Problem H: Help the problem setter</B></P>
+<P>As the inductive definition of a binary search tree suggests, this problem is 
+best solved using recursion.<BR>Obviously, if the tree has only 1 node, there is 
+only one binary search tree, so we can use any frequency (for example 1). Now 
+assume we want to calculate the frequency for an inner node. First, we calculate 
+the frequencies of the nodes in its left and right subtree by recursive calls. 
+Now, we have to think about what happens if we do not use the current node as 
+the root of its subtree. This means, that either a node of the left subtree or 
+of the right subtree becomes the root. Without loss of generality, assume that a 
+node <I>L</I> of the left subtree becomes the root. This means that some nodes 
+may move from the left subtree to the right subtree. Obviously, this will only 
+increase the access cost for the right subtree, so if we want to determine the 
+lowest possible access cost, we keep the cost of the right subtree artificially 
+constant. This can be done if we allow the new root to have 4 children.</P>
+<P>Because the frequencies of the subtrees were determined in such a way that 
+there is a unique optimal binary search tree, the structure of the left subtree 
+does not change, but all nodes of the left subtree move one level up. That means 
+that the access cost of the data structure decreases by the sum of the 
+frequencies of nodes in the left subtree.<BR>The new root gets two additional 
+children: the old root and the root of the right subtree. For the same reason as 
+above, the structure of the right subtree does not change. Obviously, converting 
+this data structure to a binary search tree with the root <I>L</I> will only 
+increase the access cost.</P>
+<P>Now let the frequency <I>F</I> of the old root be <I>1</I> plus the sum of 
+the frequencies of all nodes in the left and right subtree. As it is no longer 
+the root, its access cost increases by F, i.e. the overall access cost increases 
+by more than it decreases. Therefore we will get worse results if we use another 
+node as the root.<BR></P>
+<P>It remains to show that the frequencies calculated by this method will not 
+exceed 2<SUP>63</SUP>-1.<BR>We claim that the sum of the frequencies in a tree 
+with n nodes is &lt; 2<SUP>n</SUP>. This is proved by induction on the number of 
+nodes.<BR>With only one node, the node gets a frequency of 1, which is smaller 
+than 2<SUP>1</SUP>.<BR>Now assume the claim is true for any number of nodes 
+between <I>1</I> and <I>n-1</I> nodes. Lets look at a tree with <I>n</I> nodes 
+with <I>r</I> nodes in the right subtree and <I>n-r-1</I> nodes in the left 
+subtree. The root gets the sum of the frequencies in the left and right subtree 
++ 1 as its frequency. According to our assumption, this sum is &lt;= 
+2<SUP>n-r-1</SUP>-1 + 2<SUP>r</SUP>-1 + 1. Therefore, the sum of the frequencies 
+of all <I>n</I> nodes is 2*(2<SUP>n-r-1</SUP>-1 + 2<SUP>r</SUP>-1) + 1. It is 
+obvious that this value is largest if <I>r</I> is 0 or <I>n-1</I>. In that case, 
+the sum of all frequencies is 2*(2<SUP>n-1</SUP>-1)+1 = 2<SUP>n</SUP>-1, which 
+proofs the claim.<BR>As a corollary, we can derive that the worst case is a 
+degenerated tree in the form of a linear list. </P>
+<P>Judges' test data consists of 200 test cases; most of them are 
+random-generated. </P>
+<P><U>Rating: Medium</U> </P>
+<P><U>Reference</U> 
+<BLOCKQUOTE><A 
+  href="http://www.informatik.uni-ulm.de/acm/Locals/2004/html/greed.html">University 
+  of Ulm Local Contest 2004, problem G</A> </BLOCKQUOTE>
+<P></P></BODY></HTML>
